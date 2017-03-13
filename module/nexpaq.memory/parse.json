@@ -1,0 +1,28 @@
+[
+  
+  {
+   "fun": "usbState",
+   "data": [
+      0
+   ],
+  "state": {
+    "01":"usbEnabled",
+    "00": "usbDisabled",
+    }
+  },
+  {
+   "fun": "sdCardstate",
+   "data": [
+      1
+   ],
+  "state": {
+    "01" : "sdCardIn",
+    "00" : "sdCardOut"
+    }
+  },
+  {
+  "fun": "status",
+  "data": [0],
+  "format": "%d"
+  },
+]

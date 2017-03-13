@@ -1,0 +1,11 @@
+{
+	"id": "nexpaq.devmod",
+	"name": "DevMod",
+	"description": "DevMod module for module development and prototyping.",
+  "size": 1,
+	"version": "0.0.1",
+	"firmware_version": "0.0.0",
+	"icon": "icon.svg",
+	"creator": "nexpaq",
+	"default-tile": "maxim.devmod"
+}

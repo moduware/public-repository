@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.laser",
+  "version": "0.5.0",
+  "modules": [
+    "nexpaq.laser"
+  ],
+  "name": "Laser",
+  "description": "Nexpaq Laser tile module interface",
+  "title": "Laser",
+  "cols": 2,
+  "rows": 2,
+  "color": "#EE3696",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

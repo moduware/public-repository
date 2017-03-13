@@ -1,0 +1,12 @@
+{
+	"id": "nexpaq.battery",
+	"version": "0.0.2",
+	"name": "Battery",
+	"description": "Allowes you to see your connected batteries and control them.",
+  "size": 3,
+	"firmware_version": "1.0.2",
+	"driver_version": "1.0.1",
+	"icon": "icon.svg",
+	"creator": "nexpaq",
+	"default-tile": "nexpaq.battery-testing"
+}

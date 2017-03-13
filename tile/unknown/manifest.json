@@ -1,0 +1,16 @@
+{
+  "tileID": "unknown",
+  "modules": [
+    "unknown"
+  ],
+  "name": "Unknown tile",
+  "description": "Placeholder for unknown module",
+  "title": "Unknown",
+  "cols": 2,
+  "rows": 2,
+  "color": "black",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

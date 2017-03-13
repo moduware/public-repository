@@ -1,0 +1,171 @@
+[
+    {
+      "fun": "AIN_0",
+      "data": [
+         1,0
+      ],
+      "format": "%d*256+%d"
+    },
+    {
+      "fun": "AIN_1",
+      "data": [
+         3,2
+      ],
+      "format": "%d*256+%d"
+    },
+    {
+      "fun": "AIN_2",
+      "data": [
+         5,4
+      ],
+      "format": "%d*256+%d"
+    },
+    {
+      "fun": "AIN_3",
+      "data": [
+         7,6
+      ],
+      "format": "%d*256+%d"
+    },
+    {
+      "fun": "DIG_IO",
+      "data": [
+         9,8
+      ],
+      "format": "%d*256+%d"
+    },
+    
+    {
+        "fun": "element0",
+        "data": [
+            0,0
+        ],
+        "format": "%d*255+%d"
+    },
+    {
+        "fun": "element1",
+        "data": [
+            1
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element2",
+        "data": [
+            2,2
+        ],
+        "format": "%d*255+%d"
+    },
+    {
+        "fun": "element3",
+        "data": [
+            3
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element4",
+        "data": [
+            4,4
+        ],
+        "format": "%d*255+%d"
+    },
+    {
+        "fun": "element5",
+        "data": [
+            5
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element6",
+        "data": [
+            6
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element7",
+        "data": [
+            7
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element8",
+        "data": [
+            8
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element9",
+        "data": [
+            9
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element10",
+        "data": [
+            10
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element11",
+        "data": [
+            11
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element12",
+        "data": [
+            12
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element13",
+        "data": [
+            13
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element14",
+        "data": [
+            14
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element15",
+        "data": [
+            15
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element16",
+        "data": [
+            16
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element17",
+        "data": [
+            17
+        ],
+        "format": "%d"
+    },
+    {
+        "fun": "element18",
+        "data": [
+            18
+        ],
+        "format": "%d"
+    }
+]

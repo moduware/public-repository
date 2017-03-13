@@ -1,0 +1,18 @@
+{
+  "tileID": "maxim.devmod",
+  "version": "0.0.2",
+  "modules": [
+    "nexpaq.devmod",
+    "nexpaq.max"
+  ],
+  "name": "Maxim DevMod",
+  "description": "Maxim DevMod tile for developers and engineers",
+  "title": "MaxDevMod",
+  "cols": 2,
+  "rows": 2,
+  "color": "#00B1A8",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

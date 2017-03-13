@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.range",
+  "version": "0.9.0",
+  "modules": [
+    "nexpaq.range"
+  ],
+  "name": "Laser Distance",
+  "description": "nexpaq Laser distance tile",
+  "title": "Distance",
+  "cols": 2,
+  "rows": 2,
+  "color": "#F57C23",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

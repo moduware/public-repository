@@ -1,0 +1,11 @@
+{
+	"id": "nexpaq.range",
+	"name": "Range",
+	"description": "Range module allows you to calculate distance to object.",
+  "size": 2,
+	"version": "0.0.4",
+	"firmware_version": "0.0.3",
+	"icon": "icon.svg",
+	"creator": "nexpaq",
+	"default-tile": "nexpaq.range"
+}

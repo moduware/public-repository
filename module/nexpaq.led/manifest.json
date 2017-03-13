@@ -1,0 +1,10 @@
+{
+	"id": "nexpaq.led",
+	"name": "LED",
+	"description": "Allows you to control LED, it's color and blinking frequency.",
+  "size": 1,
+	"firmware_version": "1.0.3",
+	"icon": "icon.svg",
+	"creator": "nexpaq",
+	"default-tile": "nexpaq.led"
+}

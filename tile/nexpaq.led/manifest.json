@@ -1,0 +1,18 @@
+{
+  "tileID": "nexpaq.led",
+  "version": "1.0.0",
+  "author": "nexpaq - Hazal Ozcan",
+  "modules": [
+    "nexpaq.led"
+  ],
+  "name": "LED",
+  "description": "Nexpaq LED tile module interface",
+  "title": "LED",
+  "cols": 2,
+  "rows": 2,
+  "color": "#40CF9A",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

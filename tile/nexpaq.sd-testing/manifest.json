@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.sd-testing",
+  "varsion": "0.0.1",
+  "modules": [
+    "nexpaq.sd"
+  ],
+  "name": "#SD",
+  "description": "nexpaq SD testing tile",
+  "title": "#SD",
+  "cols": 2,
+  "rows": 2,
+  "color": "#D43755",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

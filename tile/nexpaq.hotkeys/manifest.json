@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.hotkeys",
+  "modules": [
+    "nexpaq.hotkeys"
+  ],
+  "version": "0.0.2",
+  "name": "HotKeys",
+  "description": "Nexpaq HotKeys tile module interface",
+  "title": "HotKeys",
+  "cols": 2,
+  "rows": 2,
+  "color": "#FD8541",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

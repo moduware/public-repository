@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.memory-testing",
+  "version": "0.0.1",
+  "modules": [
+    "nexpaq.memory"
+  ],
+  "name": "#Memory",
+  "description": "nexpaq Memory testing tile",
+  "title": "#Memory",
+  "cols": 2,
+  "rows": 2,
+  "color": "#5999DE",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

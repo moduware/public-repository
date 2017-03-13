@@ -1,0 +1,15 @@
+{
+  "tileID": "timeline",
+  "version": "0.0.1",
+  "modules": [],
+  "name": "Timeline tile",
+  "description": "Nexpaq Timeline tile for data analytics",
+  "title": "Timeline",
+  "cols": 2,
+  "rows": 2,
+  "color": "#DA64C2",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": true,
+  "alwaysActive": true
+}

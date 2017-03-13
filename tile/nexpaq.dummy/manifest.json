@@ -1,0 +1,16 @@
+{
+  "tileID": "nexpaq.dummy",
+  "modules": [
+    "nexpaq.dummy"
+  ],
+  "name": "Dummy",
+  "description": "Nexpaq Dummy module placeholder",
+  "title": "Dummy",
+  "cols": 2,
+  "rows": 2,
+  "color": "#6E80C6",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

@@ -1,0 +1,8 @@
+{
+  "id": "nexpaq.xamarin",
+  "name": "nexpaq application",
+  "description": "Universal multi-platform nexpaq application",
+  "version": "0.5.0",
+  "androidLink": "https://nexpaq.com/apps/nexpaq-x.apk",
+  "iosLink": "itms-services://?action=download-manifest&url=https://nexpaq.com/apps/manifest-x.plist"
+}

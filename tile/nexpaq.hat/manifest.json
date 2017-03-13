@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.hat",
+  "version": "0.9.0",
+  "modules": [
+    "nexpaq.hat"
+  ],
+  "name": "Humidity & Temperature",
+  "description": "Nexpaq Humidity & Temperature tile module interface",
+  "title": "Humidity & Temperature",
+  "cols": 2,
+  "rows": 2,
+  "color": "#FFC657",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

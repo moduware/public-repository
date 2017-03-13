@@ -1,0 +1,20 @@
+[
+	{
+		"fun": "state",
+		"data": [0, 1],
+		"state": {
+			"FFFF": "heating",
+			"FF00": "updating referrence",
+		}
+	},
+	{
+		"fun": "adc",
+		"data": [0, 1],
+		"format": "%d*256+%d"
+	},
+	{
+		"fun": "level",
+		"data": [2],
+		"format": "%d"
+	}
+]

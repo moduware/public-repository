@@ -1,0 +1,16 @@
+{
+  "tileID": "dashboard",
+  "_version": "0.9.10",
+  "modules": [],
+  "name": "Dashboard",
+  "description": "Main nexpaq application dashboard application",
+  "title": "Dashboard",
+  "cols": 2,
+  "rows": 2,
+  "color": "black",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": true,
+  "alwaysActive": true,
+  "unlisted": true
+}

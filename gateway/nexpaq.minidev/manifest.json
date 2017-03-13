@@ -1,0 +1,8 @@
+{
+	"id": "nexpaq.minidev",
+	"name": "Mini Dev Board",
+	"description": "This is nexpaq Mini Developer's Board",
+	"firmware_version": "1.0.4",
+	"icon": "icon.svg",
+	"creator": "nexpaq"
+}

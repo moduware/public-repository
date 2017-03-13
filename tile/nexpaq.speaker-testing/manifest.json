@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.speaker-testing",
+  "version": "0.0.1",
+  "modules": [
+    "nexpaq.speaker"
+  ],
+  "name": "#Speaker",
+  "description": "nexpaq Speaker testing tile",
+  "title": "#Speaker",
+  "cols": 2,
+  "rows": 2,
+  "color": "#DF5250",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.led-testing",
+  "version": "0.0.1",
+  "modules": [
+    "nexpaq.led"
+  ],
+  "name": "#LED",
+  "description": "nexpaq LED testing tile",
+  "title": "#LED",
+  "cols": 2,
+  "rows": 2,
+  "color": "#40CF9A",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

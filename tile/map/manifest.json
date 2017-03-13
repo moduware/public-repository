@@ -1,0 +1,15 @@
+{
+  "tileID": "map",
+  "version": "0.0.1",
+  "modules": [],
+  "name": "Map tile",
+  "description": "Nexpaq Map tile for data analytics",
+  "title": "Map",
+  "cols": 2,
+  "rows": 2,
+  "color": "#81C67D",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": true,
+  "alwaysActive": true
+}

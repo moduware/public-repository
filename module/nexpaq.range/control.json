@@ -1,0 +1,18 @@
+[
+	{
+		 "name":"nexpaq.range.laser_on",
+		 "cmd":[39, 0]
+	},
+	{
+		 "name":"nexpaq.range.laser_off",
+		 "cmd":[39, 2]
+	},
+	{
+		 "name":"nexpaq.range.single_measurment",
+		 "cmd":[39, 4]
+	},
+	{
+		 "name":"nexpaq.range.continuous_measurment",
+		 "cmd":[39, 6]
+	}
+]

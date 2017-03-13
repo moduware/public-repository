@@ -1,0 +1,8 @@
+{
+	"id": "nexpaq.iphone6",
+	"name": "iPhone 6 Phonepaq",
+	"description": "This is iPhone 6 Phonepaq",
+	"firmware_version": "0.5.4",
+	"icon": "icon.svg",
+	"creator": "nexpaq"
+}

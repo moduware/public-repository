@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.usbflash-testing",
+  "version": "0.0.1",
+  "modules": [
+    "nexpaq.usbflash"
+  ],
+  "name": "#USB Flash",
+  "description": "nexpaq USB Flash testing tile",
+  "title": "#USB Flash",
+  "cols": 2,
+  "rows": 2,
+  "color": "#4BC3DA",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}

@@ -1,0 +1,10 @@
+[
+  {
+  "fun": "status",
+  "data": [0],
+  "state": {
+  	"01":"pluggedIn",
+  	"00": "pluggedOut",
+  	}
+  },
+]
