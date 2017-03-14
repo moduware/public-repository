@@ -4,7 +4,7 @@
     "nexpaq.dummy"
   ],
   "name": "Dummy",
-  "description": "Nexpaq Dummy module placeholder",
+  "description": "Just a placeholder, dummy cannot do anything.",
   "title": "Dummy",
   "cols": 2,
   "rows": 2,
