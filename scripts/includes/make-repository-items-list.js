@@ -18,6 +18,7 @@ module.exports = function(itemsPath, exclusionList, itemsListPath) {
     try {
       fs.accessSync(path);
     } catch(e) {
+      console.log(e);
       console.log('ERROR: ' + dirs[i] + ': can\'t access manifest.json, skipping.');
       continue;
     }
