@@ -99,7 +99,7 @@
     },
     {
         "tileID": "nexpaq.alcohol",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "modules": [
             "nexpaq.alcohol"
         ],
@@ -252,7 +252,7 @@
     },
     {
         "tileID": "nexpaq.led",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "author": "nexpaq - Hazal Ozcan",
         "modules": [
             "nexpaq.led"
@@ -304,7 +304,7 @@
     },
     {
         "tileID": "nexpaq.range",
-        "version": "0.9.0",
+        "version": "1.0.0",
         "modules": [
             "nexpaq.range"
         ],
@@ -348,6 +348,23 @@
         "cols": 2,
         "rows": 2,
         "color": "#D43755",
+        "textColor": "white",
+        "icon": "icon.svg",
+        "unremovable": false,
+        "alwaysActive": false
+    },
+    {
+        "tileID": "nexpaq.speaker",
+        "version": "1.0.0",
+        "modules": [
+            "nexpaq.speaker"
+        ],
+        "name": "Speaker",
+        "description": "nexpaq Speaker tile",
+        "title": "Speaker",
+        "cols": 2,
+        "rows": 2,
+        "color": "#DF5250",
         "textColor": "white",
         "icon": "icon.svg",
         "unremovable": false,

@@ -133,7 +133,7 @@
         "firmware_version": "1.0.0",
         "icon": "icon.png",
         "creator": "nexpaq",
-        "default-tile": "nexpaq.speaker-testing"
+        "default-tile": "nexpaq.speaker"
     },
     {
         "id": "nexpaq.usbflash",
