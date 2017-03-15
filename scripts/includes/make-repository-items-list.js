@@ -41,7 +41,7 @@ module.exports = function(itemsPath, exclusionList, itemsListPath) {
   }
 
   // Saving the result
-  var itemsList = JSON.stringify(items);
+  var itemsList = JSON.stringify(items, null, 4);
   fs.removeSync(itemsListPath);
   fs.writeFileSync(itemsListPath, itemsList);
 
