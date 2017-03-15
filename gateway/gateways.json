@@ -1,1 +1,51 @@
-[]
+[
+    {
+        "id": "nexpaq.batpaq",
+        "name": "Batpaq",
+        "description": "This is nexpaq Batpaq",
+        "firmware_version": "1.0.13",
+        "bt_version": "1.1.7",
+        "icon": "icon.svg",
+        "creator": "nexpaq"
+    },
+    {
+        "id": "nexpaq.gateway",
+        "name": "Gateway",
+        "description": "This is default type of nexpaq gateways",
+        "firmware_version": "0.5.4",
+        "icon": "icon.svg",
+        "creator": "nexpaq"
+    },
+    {
+        "id": "nexpaq.iphone6",
+        "name": "iPhone 6 Phonepaq",
+        "description": "This is iPhone 6 Phonepaq",
+        "firmware_version": "0.5.4",
+        "icon": "icon.svg",
+        "creator": "nexpaq"
+    },
+    {
+        "id": "nexpaq.minidev",
+        "name": "Mini Dev Board",
+        "description": "This is nexpaq Mini Developer's Board",
+        "firmware_version": "1.0.4",
+        "icon": "icon.svg",
+        "creator": "nexpaq"
+    },
+    {
+        "id": "nexpaq.samsungs6",
+        "name": "Samsung S6 Phonepaq",
+        "description": "This is Samsung S6 Phonepaq",
+        "firmware_version": "0.5.4",
+        "icon": "icon.svg",
+        "creator": "nexpaq"
+    },
+    {
+        "id": "nexpaq.samsungs6e",
+        "name": "Samsung S6 Edge Phonepaq",
+        "description": "This is Samsung S6 Edge Phonepaq",
+        "firmware_version": "0.5.4",
+        "icon": "icon.svg",
+        "creator": "nexpaq"
+    }
+]
