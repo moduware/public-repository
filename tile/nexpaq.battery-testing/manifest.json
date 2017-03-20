@@ -1,6 +1,6 @@
 {
   "tileID": "nexpaq.battery-testing",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "modules": [
     "nexpaq.battery"
   ],
