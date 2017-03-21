@@ -131,6 +131,23 @@
         "alwaysActive": false
     },
     {
+        "tileID": "nexpaq.battery",
+        "version": "1.0.0",
+        "modules": [
+            "nexpaq.battery"
+        ],
+        "name": "Battery",
+        "description": "nexpaq battery tile",
+        "title": "Battery",
+        "cols": 2,
+        "rows": 2,
+        "color": "#92CD4C",
+        "textColor": "white",
+        "icon": "icon.svg",
+        "unremovable": false,
+        "alwaysActive": false
+    },
+    {
         "tileID": "nexpaq.battery-testing",
         "version": "0.0.2",
         "modules": [
@@ -221,7 +238,7 @@
         "modules": [
             "nexpaq.hotkeys"
         ],
-        "version": "0.0.2",
+        "version": "0.1.0",
         "name": "HotKeys",
         "description": "Nexpaq HotKeys tile module interface",
         "title": "HotKeys",
