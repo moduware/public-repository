@@ -8,5 +8,5 @@
 	"driver_version": "1.0.1",
 	"icon": "icon.svg",
 	"creator": "nexpaq",
-	"default-tile": "nexpaq.battery-testing"
+	"default-tile": "nexpaq.battery"
 }
