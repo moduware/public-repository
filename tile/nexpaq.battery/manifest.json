@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.battery",
+  "version": "1.0.0",
+  "modules": [
+    "nexpaq.battery"
+  ],
+  "name": "Battery",
+  "description": "nexpaq battery tile",
+  "title": "Battery",
+  "cols": 2,
+  "rows": 2,
+  "color": "#92CD4C",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}
