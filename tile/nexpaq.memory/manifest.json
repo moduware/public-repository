@@ -1,0 +1,17 @@
+{
+  "tileID": "nexpaq.memory",
+  "version": "1.0.0",
+  "modules": [
+    "nexpaq.memory"
+  ],
+  "name": "Memory",
+  "description": "nexpaq Memory tile",
+  "title": "Memory",
+  "cols": 2,
+  "rows": 2,
+  "color": "#5999DE",
+  "textColor": "white",
+  "icon": "icon.svg",
+  "unremovable": false,
+  "alwaysActive": false
+}
