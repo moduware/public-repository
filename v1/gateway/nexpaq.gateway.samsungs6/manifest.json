@@ -1,0 +1,8 @@
+{
+	"id": "nexpaq.samsungs6",
+	"name": "Samsung S6 Phonepaq",
+	"description": "This is Samsung S6 Phonepaq",
+	"firmware_version": "0.5.4",
+	"icon": "icon.svg",
+	"creator": "nexpaq"
+}
