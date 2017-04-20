@@ -1,8 +1,7 @@
 {
-	"id": "nexpaq.samsungs6",
+	"id": "nexpaq.gateway.samsungs6",
 	"name": "Samsung S6 Phonepaq",
-	"description": "This is Samsung S6 Phonepaq",
-	"firmware_version": "0.5.4",
-	"icon": "icon.svg",
-	"creator": "nexpaq"
+	"description": "The phonepaq is the world’s first truly modular case that allows your smartphone to do more. How much more is up to you.",
+
+	"firmware_version": "0.5.4"
 }

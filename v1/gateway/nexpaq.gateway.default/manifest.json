@@ -1,8 +1,6 @@
 {
-	"id": "nexpaq.gateway",
+	"id": "nexpaq.gateway.default",
 	"name": "Gateway",
-	"description": "This is default type of nexpaq gateways",
-	"firmware_version": "0.5.4",
-	"icon": "icon.svg",
-	"creator": "nexpaq"
+
+	"firmware_version": "0.5.4"
 }
