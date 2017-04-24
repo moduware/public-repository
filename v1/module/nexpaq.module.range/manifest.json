@@ -1,0 +1,11 @@
+{
+	"id": "nexpaq.module.range",
+	"name": "Range",
+	"description": "nexpaq Range module allows you to measure distance to object.",
+
+  "firmware_version": "0.0.3",
+
+	"size": 2,
+	"orientation": "up",
+	"default-tile": "nexpaq.tile.range"
+}
