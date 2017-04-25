@@ -6,6 +6,6 @@
   "firmware_version": "0.0.3",
 
 	"size": 2,
-	"orientation": "up",
+	"orientation": "down",
 	"default-tile": "nexpaq.tile.range"
 }
