@@ -1,0 +1,11 @@
+{
+	"id": "nexpaq.module.hat",
+	"name": "T&H",
+	"description": "nexpaq Temperature & Humidity module allows you to see temperature and humidity.",
+
+	"firmware_version": "1.0.2",
+
+  "size": 1,
+	"orientation": "up",
+	"default-tile": "nexpaq.tile.hat"
+}

@@ -303,6 +303,23 @@
         "alwaysActive": false
     },
     {
+        "tileID": "nexpaq.memory",
+        "version": "1.0.0",
+        "modules": [
+            "nexpaq.memory"
+        ],
+        "name": "Memory",
+        "description": "nexpaq Memory tile",
+        "title": "Memory",
+        "cols": 2,
+        "rows": 2,
+        "color": "#5999DE",
+        "textColor": "white",
+        "icon": "icon.svg",
+        "unremovable": false,
+        "alwaysActive": false
+    },
+    {
         "tileID": "nexpaq.memory-testing",
         "version": "0.0.1",
         "modules": [
@@ -354,6 +371,23 @@
         "alwaysActive": false
     },
     {
+        "tileID": "nexpaq.sd",
+        "varsion": "1.0.0",
+        "modules": [
+            "nexpaq.sd"
+        ],
+        "name": "SD",
+        "description": "nexpaq SD tile",
+        "title": "SD",
+        "cols": 2,
+        "rows": 2,
+        "color": "#D43755",
+        "textColor": "white",
+        "icon": "icon.svg",
+        "unremovable": false,
+        "alwaysActive": false
+    },
+    {
         "tileID": "nexpaq.sd-testing",
         "varsion": "0.0.1",
         "modules": [
@@ -399,6 +433,23 @@
         "cols": 2,
         "rows": 2,
         "color": "#DF5250",
+        "textColor": "white",
+        "icon": "icon.svg",
+        "unremovable": false,
+        "alwaysActive": false
+    },
+    {
+        "tileID": "nexpaq.usbflash",
+        "version": "1.0.0",
+        "modules": [
+            "nexpaq.usbflash"
+        ],
+        "name": "USB Flash",
+        "description": "nexpaq USB Flash tile",
+        "title": "USB Flash",
+        "cols": 2,
+        "rows": 2,
+        "color": "#4BC3DA",
         "textColor": "white",
         "icon": "icon.svg",
         "unremovable": false,

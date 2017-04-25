@@ -1,0 +1,10 @@
+{
+	"id": "nexpaq.gateway.batpaq",
+	"name": "Batpaq",
+	"description": "The batpaq is a standalone device that works the same as the phonepaq but with any mobile device. It is the first modular power bank that can charge your phone over 3 times over.",
+	
+	"firmware_version": "1.0.13",
+
+	"ble_version": "1.1.7",
+	"min_ble_version": "1.1.5"
+}
