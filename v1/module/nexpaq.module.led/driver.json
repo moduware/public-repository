@@ -9,15 +9,15 @@
             "arguments": [
                 {
                     "name": "Red",
-                    "validate": "({0} >= 0) and ({0} <= 255)"
+                    "validation": "({0} >= 0) and ({0} <= 255)"
                 }, 
                 {
                     "name": "Green",
-                    "validate": "({0} >= 0) and ({0} <= 255)"
+                    "validation": "({0} >= 0) and ({0} <= 255)"
                 }, 
                 {
                     "name": "Blue",
-                    "validate": "({0} >= 0) and ({0} <= 255)"
+                    "validation": "({0} >= 0) and ({0} <= 255)"
                 }
             ],
             "command": "2702"
@@ -38,11 +38,11 @@
             "arguments": [
                 {
                     "name": "Flash 1 Brightness",
-                    "validate": "({0} >= 0) and ({0} <= 9000)"
+                    "validation": "({0} >= 0) and ({0} <= 9000)"
                 },
                 {
                     "name": "Flash 2 Brightness",
-                    "validate": "({0} >= 0) and ({0} <= 9000)"
+                    "validation": "({0} >= 0) and ({0} <= 9000)"
                 }
             ],
             "command": "270A",
@@ -75,11 +75,11 @@
             "arguments": [
                 {
                     "name": "Power",
-                    "validate": "({0} >= 0) and ({0} <= 15)"
+                    "validation": "({0} >= 0) and ({0} <= 15)"
                 },
                 {
                     "name": "Delay",
-                    "validate": "({0} >= 0) and ({0} <= 1280)"
+                    "validation": "({0} >= 0) and ({0} <= 1280)"
                 }
             ],
             "command": "270A",
