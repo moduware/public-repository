@@ -25,7 +25,7 @@
             ]
         }
     ],
-    "rules": [
+    "dataVariables": [
         {
             "name": "humidity",
             "title": "Humidity",
