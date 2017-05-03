@@ -52,7 +52,7 @@
                 },
                 {
                     "convert": true,
-                    "format": "({0} >> 8) >> 0xFF"
+                    "format": "({0} >> 8) & 0xFF"
                 },
                 {
                     "convert": true,
@@ -60,7 +60,7 @@
                 },
                 {
                     "convert": true,
-                    "format": "({1} >> 8) >> 0xFF"
+                    "format": "({1} >> 8) & 0xFF"
                 },
                 {
                     "convert": true,
@@ -93,7 +93,7 @@
                 },
                 {
                     "convert": true,
-                    "format": "({1} >> 8) >> 0xFF"
+                    "format": "({1} >> 8) & 0xFF"
                 },
                 {
                     "convert": true,
