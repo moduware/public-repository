@@ -1,0 +1,11 @@
+{
+	"id": "nexpaq.module.memory",
+	"name": "Memory",
+	"description": "nexpaq module with additional memory",
+
+	"firmware_version": "1.0.2",
+
+  "size": 1,
+	"orientation": "up",
+	"default-tile": "nexpaq.tile.memory"
+}
