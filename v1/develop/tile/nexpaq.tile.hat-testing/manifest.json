@@ -1,0 +1,15 @@
+{
+  "id": "nexpaq.tile.hat-testing",
+  "name": "Temperature & Humidity",
+  "description": "Nexpaq H&T module interface for testing",
+
+  "version": "0.0.2",
+  "app_version": "1.0.0",
+  "modules": [
+    "nexpaq.module.hat"
+  ],
+  
+  "title": "Temperature",
+  "color": "black",
+  "text_color": "white"
+}
