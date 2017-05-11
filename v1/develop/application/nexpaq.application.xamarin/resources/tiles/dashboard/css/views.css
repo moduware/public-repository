@@ -1,0 +1,9 @@
+body.nexpaq-header.platform-android .view {
+    height: calc(100% - 55px);
+    top: 55px;
+}
+
+body.nexpaq-header.platform-ios .view {
+    height: calc(100% - 44px);
+    top: 44px;
+}

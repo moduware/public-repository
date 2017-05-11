@@ -1,0 +1,54 @@
+{
+    "type": "nexpaq.module.hat",
+    "version": "1.0.0",
+    "commands": [
+        {
+            "name": "StartSensor",
+            "title": "Start T&H sensor",
+            "description": "To work with T&H module and read data, sensor must be started first",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 3
+                }
+            ]
+        },
+        {
+            "name": "StopSensor",
+            "title": "Stop T&H sensor",
+            "description": "Stop reading data from T&H module.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 4
+                }
+            ]
+        }
+    ],
+    "dataVariables": [
+        {
+            "name": "humidity",
+            "title": "Humidity",
+            "description": "Ambient humidity detected by module",
+            "data": [0, 1],
+            "format": "175.75 * ({0} * 256 + {1} / 4 * 4) / 65536 - 46.85",
+            "source": "data"
+        },
+        {
+            "name": "ambient_temperature",
+            "title": "Ambient Temperature",
+            "description": "Ambient temperature detected by module",
+            "data": [4, 5],
+            "format": "({0} * 256 + {1}) * 0.02 - 273.15",
+            "source": "data"
+        },
+        {
+            "name": "object_temperature",
+            "title": "Object Temperature",
+            "description": "Object temperature detected by module",
+            "data": [2, 3],
+            "format": "({0} * 256 + {1}) * 0.02 - 273.15",
+            "source": "data"
+        }
+    ]
+}
