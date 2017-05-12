@@ -11023,8 +11023,8 @@ this.fire('dom-change');
         
       },
       ready: function() {
-        window.addEventListener('NexpaqAPIReady', function() {
-          Nexpaq.API.RepositoryRequestString('/v1/application/nexpaq.application.xamarin/manifest.json', applicationManifestReceivedHandler, function(error) { console.error(error); })
+        document.addEventListener('NexpaqAPIReady', function() {
+          Nexpaq.API.RepositoryRequestString('/v1/' + Nexpaq.API.Branch + '/application/nexpaq.application.xamarin/manifest.json', applicationManifestReceivedHandler, function(error) { console.error(error); })
         });
       }
     });
