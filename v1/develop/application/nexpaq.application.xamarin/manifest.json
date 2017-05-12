@@ -1,7 +1,7 @@
 {
     "id": "nexpaq.application.xamarin",
 	"name": "Xamarin nexpaq App",
-	"description": "Nexpaq application based on xamarin technoloy",
-    "version": "1.0.0",
-    "link": "https://nexpaq.com/app"
+	"description": "Nexpaq application based on xamarin technology, version for developers.",
+    "version": "1.0.1",
+    "link": "https://nexpaq.com/app-dev"
 }
