@@ -9645,7 +9645,7 @@ this.fire('dom-change');
             }
 
             .background .icon {
-                width: 100%;
+                max-width: 100%;
             }
 
             .name {
@@ -10847,7 +10847,7 @@ this.fire('dom-change');
       },
       _deviceEditHandler: function(e) {
         var name = prompt('Edit device name', e.target.name);
-        if(name != e.target.name) {
+        if(name != null && name != e.target.name) {
           if(name.length >= 18 || name.length < 3) {
             alert('Device name cannot be longer that 18 characters or shorter than 3.');
             return;
@@ -11059,8 +11059,10 @@ this.fire('dom-change');
     function setPageEventListeners(page) {
       FW7.onPageBeforeAnimation(page.dataset.page, function(e) {
         // Notifing current page that we are leaving
-        var from_page = e.fromPage.container;
-        if(typeof(from_page.leave) != 'undefined') from_page.leave();
+        if(typeof(e.fromPage) != 'undefined') {
+            var from_page = e.fromPage.container;
+            if(typeof(from_page.leave) != 'undefined') from_page.leave();
+        }
         // Letting new page know that we are comming (and may be even have some arguments as gifts)
         var args = window.nexpaqPageChangeArgs;
         window.nexpaqPageChangeArgs = [];
