@@ -24,5 +24,18 @@
                 }
             ]
         }
+    ],
+    "dataVariables": [
+        {
+            "name": "state",
+            "title": "State",
+            "description": "Notifies state of the sensor",
+            "data": [0],
+            "state": {
+                "00": "cover closed",
+                "01": "cover open"
+            },
+            "source": "data"
+        }
     ]
 }
