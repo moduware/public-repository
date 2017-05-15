@@ -40,7 +40,7 @@
         {
             "name": "adc",
             "title": "ADC",
-            "description": "ADC value detected by module",
+            "description": "ADC value detected by module for gas pollution in surrounding area",
             "data": [4, 5],
             "format": "({0} * 256 + {1})",
             "source": "data"
