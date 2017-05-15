@@ -79,7 +79,7 @@
             "source": "data"
         },
         {
-            "name": "value",
+            "name": "voltage",
             "title": "Voltage value",
             "description": "Voltage value detected by module",
             "data": [1, 2],
