@@ -1,0 +1,7 @@
+.page {
+    background-color: #f9f9f9;
+}
+
+body.platform-ios .page-content {
+    overflow: scroll;
+}

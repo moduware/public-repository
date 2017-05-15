@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LED</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <link rel="icon" sizes="192x192" href="img/AirQ.png"> -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- vendor -->
+    <script src="vendor/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="vendor/svg-injector.min.js" type="text/javascript"></script>
+    <script src="vendor/raphael.min.js" type="text/javascript"></script>
+    <script src="vendor/colorwheel.js" type="text/javascript"></script>
+     
+    <!-- nexpaq libs -->
+    <script type="text/javascript" src="js/NexpaqHeader.js"></script>
+
+    <!-- partials -->
+
+    <!-- screens -->
+
+    <!-- tools-->
+ 
+    <!-- core -->
+    <script type="text/javascript" src="js/native.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  
+  </head>
+  <body>
+  <style id="synamic_styles"></style>
+    <div id="wrapper" class="wrapper" data-color="white">
+     
+      <div class= "flashcontrol">
+       <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="checkbox" id="myonoffswitch" checked>
+        <label class="switch-label" for="myonoffswitch"></label>
+      </div>
+        <button id="flashbutton_left" class="flashbutton_left"></button>
+        <button id="flashbutton_right" class="flashbutton_right"></button>
+      </div>
+      <button class="led-button" data-color="white" id="main-button">
+      </button>
+      <div id= "wheel-control" class="wheel-control hidden">
+      <div class="brightness-control">
+        <div id="textbox">
+          <p class="alignleft">Darker</p>
+          <p class="alignright">Lighter</p>
+        </div>
+        <input type="range" id="nxprange" class="nxprange" min="1" max="100" step="1" value="50" oninput="dragHandler(value)">
+        <output for="nxprange" id="position"></output>
+      </div>
+      <div class= "wheel" id="wheel"></div> 
+      </div>
+      <div id ="color-control" class="color-control">
+          <button data-color="white" style="background-color:white"></button>
+          <button data-color="red" style="background-color:#ff4646"></button>
+          <button data-color="green" style="background-color:#40d78b" ></button>
+          <button data-color="blue" style="background-color:#00bfde"></button>
+          <button data-color="yellow" style="background-color:#fbec00"></button>
+      </div>
+    </div>
+  </body>
+</html>

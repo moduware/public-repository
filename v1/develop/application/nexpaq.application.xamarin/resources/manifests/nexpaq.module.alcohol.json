@@ -1,0 +1,11 @@
+{
+	"id": "nexpaq.module.alcohol",
+	"name": "Alcohol",
+	"description": "nexpaq Alcohol sensor module",
+
+	"firmware_version": "1.0.0",
+
+  "size": 1,
+	"orientation": "up",
+	"default-tile": "nexpaq.tile.alcohol"
+}

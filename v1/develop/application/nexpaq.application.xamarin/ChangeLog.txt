@@ -1,0 +1,5 @@
+Changelog
+
+=== 1.0.1 Picard
+- bugfix of iOS crash when launch on app version with 3 digits in version
+- bugfix of dynamic driver loading from JS
