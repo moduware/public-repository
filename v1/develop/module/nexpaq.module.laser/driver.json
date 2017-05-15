@@ -29,7 +29,7 @@
         {
             "name": "state",
             "title": "State",
-            "description": "Notifies state of the sensor",
+            "description": "Notifies state of the module",
             "data": [0],
             "state": {
                 "00": "cover closed",
