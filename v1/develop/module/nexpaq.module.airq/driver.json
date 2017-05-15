@@ -5,7 +5,7 @@
         {
             "name": "StartSensor",
             "title": "Start AirQ sensor",
-            "description": "Start AirQ sensor to read data",
+            "description": "Start reading data from AirQ module",
             "command": "2700",
             "data": [
                 {
@@ -16,7 +16,7 @@
         {
             "name": "StopSensor",
             "title": "Stop AirQ sensor",
-            "description": "Stop reading data from AirQ module.",
+            "description": "Stop reading data from AirQ module",
             "command": "2700",
             "data": [
                 {
@@ -40,7 +40,7 @@
         {
             "name": "adc",
             "title": "ADC value",
-            "description": "ADC value detected by module",
+            "description": "ADC value detected by module for gas pollution level",
             "data": [0, 1],
             "format": "({0} * 256 + {1})",
             "source": "data"
