@@ -1,0 +1,98 @@
+{
+    "type": "nexpaq.module.battery",
+    "version": "1.0.0",
+    "commands": [
+        {
+            "name": "SetDischarging",
+            "title": "Set battery to discharge",
+            "description": "Sets battery module to discharge",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
+        },
+        {
+            "name": "SetCharging",
+            "title": "Set battery to charge",
+            "description": "Sets battery module to charge",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 1
+                }
+            ]
+        },
+        {
+            "name": "SetStandby",
+            "title": "Set battery to standby",
+            "description": "Sets battery module to standby",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 3
+                }
+            ]
+        },
+        {
+            "name": "CheckStatus",
+            "title": "Check battery status",
+            "description": "Checks battery module status",
+            "command": "2702"
+        },
+        {
+            "name": "SetChargeCurrent100",
+            "title": "Set charge current to 100",
+            "description": "Sets battery module charge current to 100mA",
+            "command": "2704",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
+        },
+        {
+            "name": "SetChargeCurrent250",
+            "title": "Set charge current to 250",
+            "description": "Sets battery module charge current to 250mA",
+            "command": "2704",
+            "data": [
+                {
+                    "defaultValue": 1
+                }
+            ]
+        }
+    ],
+    "dataVariables": [
+        {
+            "name": "state",
+            "title": "State",
+            "description": "State of battery module",
+            "data": [0],
+            "state": {
+                "01": "charging",
+                "02": "discharging",
+                "03": "standby",
+                "04": "full"
+            },
+            "source": "data"
+        },
+        {
+            "name": "voltage",
+            "title": "Voltage value",
+            "description": "Voltage value detected by module",
+            "data": [1, 2],
+            "format": "({0}.{1})",
+            "source": "data"
+        },
+        {
+            "name": "percentage",
+            "title": "Battery percentage",
+            "description": "Battery percentage detected by module",
+            "data": [3],
+            "format": "({0})",
+            "source": "data"
+        }
+    ]
+}
