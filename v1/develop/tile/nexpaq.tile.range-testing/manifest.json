@@ -1,0 +1,15 @@
+{
+  "id": "nexpaq.tile.range-testing",
+  "name": "Laser Distance",
+  "description": "Nexpaq Laser distance module interface for testing",
+
+  "version": "1.0.0",
+  "app_version": "1.0.0",
+  "modules": [
+    "nexpaq.module.range"
+  ],
+  
+  "title": "Distance",
+  "color": "black",
+  "text_color": "white"
+}
