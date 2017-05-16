@@ -3,17 +3,6 @@
     "version": "1.0.0",
     "commands": [
         {
-            "name": "TurnOffLaser",
-            "title": "Turn off laser",
-            "description": "Turns off laser module",
-            "command": "2700",
-            "data": [
-                {
-                    "defaultValue": 0
-                }
-            ]
-        },
-        {
             "name": "TurnOnLaser",
             "title": "Turn on laser",
             "description": "Turns on laser module",
@@ -23,17 +12,28 @@
                     "defaultValue": 1
                 }
             ]
+        },
+        {
+            "name": "TurnOffLaser",
+            "title": "Turn off laser",
+            "description": "Turns off laser module",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
         }
     ],
     "dataVariables": [
         {
-            "name": "state",
-            "title": "State",
-            "description": "Notifies state of the module",
+            "name": "cover_state",
+            "title": "Cover State",
+            "description": "State of module cover",
             "data": [0],
             "state": {
-                "00": "cover closed",
-                "01": "cover open"
+                "00": "closed",
+                "01": "open"
             },
             "source": "data"
         }
