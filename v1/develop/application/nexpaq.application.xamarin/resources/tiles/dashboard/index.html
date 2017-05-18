@@ -8536,7 +8536,7 @@ this.fire('dom-change');
                 if(typeof(type) == 'undefined' || type == null) {
                     element.cleanStyle();
                 } else if(typeof(window.tilesManifests[type]) == 'undefined') {
-                    Nexpaq.API.Tile.Installed(function(installed) {
+                    Nexpaq.API.Tile.IsInstalled(function(installed) {
                         if(installed) {
                             Nexpaq.API.Tile.Get(type, function(manifest) {
                                 window.tilesManifests[type] = manifest;
@@ -9019,7 +9019,7 @@ this.fire('dom-change');
             },
             _tileRunHandler: function(tile, module) {
               var element = this;
-              Nexpaq.API.Tile.Installed(function(installed) {
+              Nexpaq.API.Tile.IsInstalled(function(installed) {
                 if(installed) {
                   Nexpaq.API.Tile.Run(tile.type, [module.uuid, module.slot, module.type]);
                 } else {
@@ -9190,6 +9190,12 @@ this.fire('dom-change');
                     });
                     Nexpaq.API.Gateway.addEventListener('BatteryStateReceived', function(json) {
                         element._batteryStateReceivedHandler(json);
+                    });
+                    Nexpaq.API.Bluetooth.addEventListener('DeviceDisconnected', function(e) {
+                        element._deviceDisconnected(e);
+                    });
+                    Nexpaq.API.Bluetooth.addEventListener('DeviceConnectionLost', function(e) {
+                        element._deviceDisconnected(e);
                     });  
                 });
             },
@@ -9218,6 +9224,10 @@ this.fire('dom-change');
                 this.set('percent', Battery.Percent);
                 this.set('state', Battery.Status);
             },
+            _deviceDisconnected: function() {
+                this.set('percent', 0);
+                this.set('state', 'Unknown');
+            },
             _manifestSetHandler: function(json) {
                 var Manifest = json.Manifest;
                 this.set('gatewayType', Manifest.name);
@@ -9240,12 +9250,31 @@ this.fire('dom-change');
             :host {
                 display: block;
             }
+            :host a {
+                color: inherit;
+            }
         </style>
         
+        <div class="content-block-title">Updates</div>
+        <div class="list-block">
+            <ul>
+                <a href="#updates" class$="item-content [[IfiOS('item-link')]]">
+                    <div class="item-inner">
+                        <div class="item-title">Updates</div>
+                        <template is="dom-if" if="[[NotEqual(updatesAvailable, 0)]]">
+                            <div class="item-after">
+                                <span class="badge bg-red">[[updatesAvailable]]</span>
+                            </div>
+                        </template>
+                    </div>
+                </a>
+            </ul>
+        </div>
+
         <div class="content-block-title">Support</div>
         <div class="list-block">
             <ul>
-                <a href="https://nexpaq.com/contact" target="_blank" class="item-link external">
+                <a href="https://nexpaq.com/contact" target="_blank" class$="external [[IfiOS('item-link')]]">
                     <li class="item-content">
                         
                         <template is="dom-if" if="[[AreEqual(platform, 'android')]]">
@@ -9270,16 +9299,16 @@ this.fire('dom-change');
                 </li>
                 
                 <li>
-                    <a href="#debug" class="item-content item-link">
+                    <a href="#debug" class$="item-content [[IfiOS('item-link')]]">
                         <div class="item-inner">
-                            <div class="item-title">Debug info</div>
+                            <div class="item-title">Debug</div>
                         </div>
                     </a>
                 </li>
 
                 
                 <li>
-                    <a href="#licenses" class="item-content item-link">
+                    <a href="#licenses" class$="item-content [[IfiOS('item-link')]]">
                         <div class="item-inner">
                             <div class="item-title">Licenses</div>
                         </div>
@@ -9302,6 +9331,9 @@ this.fire('dom-change');
                 codename: {
                     type: String,
                     value: 'Unknown'
+                },
+                updatesAvailable: {
+                    type: Number
                 }
             },
             ready: function() {
@@ -9424,11 +9456,11 @@ this.fire('dom-change');
           </div>
           
           <div class="tab settings-tab" id="settings-tab">
-            <nexpaq-settings></nexpaq-settings>
+            <nexpaq-settings updates-available="{{updatesAvailable}}"></nexpaq-settings>
           </div>
         </div> 
 
-        <nexpaq-navbar></nexpaq-navbar>
+        <nexpaq-navbar updates-available="{{updatesAvailable}}"></nexpaq-navbar>
         
     </div>
 
@@ -9462,6 +9494,7 @@ this.fire('dom-change');
             reflectToAttribute: true,
             value: 'Device'
         },
+        updatesAvailable: Number
       },
       created: function() {
         this.classList.add('page'); //'cached');
@@ -10161,6 +10194,412 @@ this.fire('dom-change');
     });
   </script>
 </dom-module>
+<dom-module id="nexpaq-update-list-item" assetpath="elements/">
+    <template>
+        <style>
+            :host {
+                display: block;
+                position: relative;
+                box-sizing: border-box;
+                
+            }
+
+            :host[platform='ios'] {
+                padding-left: 50px;
+                padding-right: 75px;
+            }
+
+            :host[platform='android'] .card-content-inner {
+                display: flex;
+                flex-direction: column;
+
+                padding: 12px 16px 12px 60px;
+                align-items: flex-start;
+            }
+
+            :host[platform='android'] .background {
+                position: absolute;
+                top: 15px; left: 17px;
+            }
+
+            :host[platform='ios'] .background {
+                position: absolute;
+                top: 4px; left: 0;
+            }
+
+            .background {
+                display: flex;
+                box-sizing: border-box;
+                width: 32px; height: 32px;
+
+                padding: 7px;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 2px;
+            }
+
+            :host[type='module'] .background,
+            :host[type='gateway'] .background,
+            :host[type='bootloader'] .background {
+                background-color: #EE3696;
+            }
+
+            .background .icon {
+                max-width: 100%;
+            }
+
+            .title {
+                color: black;
+                font-size: 16px;
+            }
+
+            :host[platform="android"] .version, 
+            :host[platform="android"] .description {
+                color: #8F8F8F;
+                font-size: 14px;
+            }
+
+            :host[platform="ios"] .version, 
+            :host[platform="ios"] .description {
+                color: black;
+                font-size: 12px;
+            }
+
+            :host[platform="android"] .version {
+                font-weight: 700;
+            }
+
+            .update-button,
+            .update-indicator,
+            .updated-text {
+                display: inline-block;
+                align-self: flex-end;
+            }
+
+            :host[platform="ios"] .update-button,
+            :host[platform="ios"] .update-indicator,
+            :host[platform="ios"] .updated-text {
+                position: absolute;
+                top: 4px; right: 0;
+            }
+
+            .updated-text {
+                text-transform: uppercase;
+                color: #606060;
+            }
+
+            .update-indicator {
+                width: 24px; height: 24px;
+            }
+            .update-indicator .preloader {
+                width: 100%; height: 100%;
+            }
+
+            :host[updating] .update-button,
+            :host[updated] .update-button {
+                display: none;
+            }
+
+            :host:not([updating]) .update-indicator {
+                display: none;
+            }
+
+            :host:not([updated]) .updated-text {
+                display: none;
+            } 
+        </style>
+        
+        <div class$="[[IfAndroid('card')]]">
+            <div class$="[[IfAndroid('card-content')]]">
+                <div class$="[[IfAndroid('card-content-inner')]]">
+                    <div class="background" style$="background-color: [[color]];">
+                        <template is="dom-if" if="[[AreEqual(type, 'tile')]]">
+                            <img src="[[icon]]" class="icon">
+                        </template>
+                        <template is="dom-if" if="[[AreEqual(type, 'module')]]">
+                            <img src="img/module-update-icon.svg" class="icon">
+                        </template>
+                        <template is="dom-if" if="[[AreEqual(type, 'gateway')]]">
+                            <img src="img/gateway-update-icon.svg" class="icon">
+                        </template>
+                        <template is="dom-if" if="[[AreEqual(type, 'bootloader')]]">
+                            <img src="img/gateway-update-icon.svg" class="icon">
+                        </template>
+                    </div>
+                    <div class="title">[[name]]</div>
+                    <div class="version">[[version]]</div>
+                    <div class="description">[[description]]</div>
+                    <a href="#" class="update-button button">Update</a>
+                    
+                    <div class="updated-text">Done</div>
+
+                    <div class="update-indicator" id="updateIndicator">
+                        <span class="preloader preloader-pink"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'nexpaq-update-list-item',
+            behaviors: [ElementBehavior],
+            properties: {
+                id: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                type: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                name: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                version: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                description: {
+                    type: String
+                },
+                icon: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                color: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                updating: {
+                    type: Boolean,
+                    value: false,
+                    reflectToAttribute: true
+                },
+                updated: {
+                    type: Boolean,
+                    value: false,
+                    reflectToAttribute: true
+                }
+            },
+            ready: function() {
+                if(typeof(FW7) != 'undefined') FW7.initPageMaterialPreloader(this.$.updateIndicator);
+            }
+        });
+    </script>
+</dom-module>
+<dom-module id="page-updates" assetpath="pages/">
+  <template>
+    <style>
+      :host {
+        
+      }
+      
+      .page-content {
+        
+      }
+      .cards-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+    <div class="page-content pull-to-refresh-content" id="updatePullToRefresh">
+      
+      <div class="pull-to-refresh-layer">
+        <div class="preloader"></div>
+        <div class="pull-to-refresh-arrow"></div>
+      </div>
+
+      <div class="content-block-title">[[updatesAvailable]] Pending</div>
+      <div class$="[[IfiOS('list-block')]]">
+        <ul class$="[[IfAndroid('cards-list')]]">
+
+          <template is="dom-repeat" items="[[updates]]">
+            <li class$="[[IfiOS('item-content')]]">
+              <div class$="[[IfiOS('item-inner')]]">
+                <nexpaq-update-list-item id="[[item.id]]" type="[[item.type]]" name="[[item.name]]" version="[[item.version]]" description="[[item.description]]" color="[[item.color]]" icon="[[item.icon]]" on-tap="updateItemHandler"></nexpaq-update-list-item>
+              </div>
+            </li>
+          </template>
+        </ul> 
+      </div>
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'page-updates',
+      behaviors: [PageBehavior],
+
+      properties: {
+        updates: {
+          type: Array,
+          value: function() {
+            return [];
+            return [
+              {
+                id: 'nexpaq.tile.led',
+                type: 'tile',
+                name: 'Temperature & Humidity',
+                version: '1.1.1',
+                description: 'test description text',
+                color: '#FFB930',
+                icon: '../img/default_tile_icon.svg'
+              },
+              {
+                id: 'nexpaq.module.laser',
+                type: 'module',
+                name: 'Laser',
+                version: '1.0.1',
+                description: 'test description text'
+              },
+              {
+                id: 'nexpaq.gateway.batpaq',
+                type: 'gateway',
+                name: 'Batpaq',
+                version: '1.0.1',
+                description: 'test description text'
+              },
+              {
+                id: 'nexpaq.gateway.batpaq',
+                type: 'bootloader',
+                name: 'Batpaq',
+                version: '1.0.1',
+                description: 'test description text'
+              }
+            ];
+          }
+        },
+        updatesAvailable: {
+          type: Number,
+          reflectToAttribute: true,
+          computed: 'countAvailableUpdates(updates.length)',
+          notify: true
+        }
+      },
+
+      created: function() {
+        this.classList.add('page', 'chached'); //'cached');
+      },
+      ready: function() {
+        var element = this;
+        document.addEventListener('NexpaqAPIReady', function() { 
+          // We are tracking tile updates so we can add them to updates list
+          Nexpaq.API.Tile.addEventListener('UpdateAvailable', function(data) {
+            element.tileUpdateAvailableHandler(data);
+          });
+          // We are tracking tile deletion so we know if update is not required anymore
+          Nexpaq.API.Tile.addEventListener('Deleted', function(data) {
+            element.tileDeletedHandler(data);
+          });
+          
+          // requesting updates
+          this.requestUpdates();
+        });
+        document.addEventListener('WebComponentsReady', function() {
+          element.initPullToRequest();
+        });
+      },
+      show: function() {
+        NexpaqHeader.setTitle('Updates');
+        NexpaqHeader.cleanButtons();
+        NexpaqHeader.resetBackButtonIcon();
+        NexpaqHeader.showBackButton();
+      },
+      leave: function() {
+        ResetNexpaqHeader();
+      },
+
+      requestUpdates: function() {
+        this.set('updates', []);
+        Nexpaq.API.Tile.RequestLatestManifests(function(error) {
+            console.error(error);
+        });
+      },
+
+      initPullToRequest: function() {
+        var element = this;
+
+        var ptrContent = Dom7(this.$.updatePullToRefresh);
+        ptrContent.on('ptr:refresh', function(e) {
+          element.requestUpdates();
+          setTimeout(function() {
+            FW7.pullToRefreshDone();
+          }, 2000);
+        });
+      },
+
+      countAvailableUpdates: function(updates) {
+        return updates;
+      },
+
+      updateItemHandler: function(e) {
+        var item = e.currentTarget;
+        item.set('updating', true);
+
+        if(item.type == 'tile') {
+          this.updateTile(item);
+        }
+      },
+      updateTile: function(item) {
+        var element = this;
+        Nexpaq.API.Tile.Install(item.id, function() {
+          item.set('updating', false);
+          item.set('updated', true);
+          setTimeout(function() {
+            for(var i = 0; i < element.updates.length; i++) {
+              if(element.updates[i].id == item.id) {
+                element.arrayDelete('updates', element.updates[i]);
+                break;
+              }
+            }
+          }, 2000);
+        }, function(error) {
+          item.set('updating', false);
+          alert(error);
+        });
+      },
+
+      tileUpdateAvailableHandler: function(event) {
+        var element = this;
+        var tile = event.Tile;
+
+        var update = {
+          id: tile.Id,
+          type: 'tile',
+          name: tile.CurrentManifest.name,
+          version: tile.Manifest.version,
+          description: tile.Manifest.changes,
+          color: tile.CurrentManifest.color
+        };
+
+        Nexpaq.API.Tile.GetIconUrl(function(url) {
+          update.icon = url;
+          element.push('updates', update);
+        }, update.id);
+      },
+
+      tileDeletedHandler: function(event) {
+        var tile = event.Tile;
+
+        for(var i = 0; i < this.updates.length; i++) {
+          if(this.updates[i].type != 'tile') continue;
+          if(this.updates[i].id == tile.Id) {
+            this.arrayDelete('updates', this.updates[i]);
+            break;
+          }
+        }
+
+      }
+
+    });
+  </script>
+</dom-module>
 <dom-module id="page-licenses" assetpath="pages/">
   <template>
     <style>
@@ -10371,6 +10810,7 @@ this.fire('dom-change');
         NexpaqHeader.cleanButtons();
         NexpaqHeader.resetBackButtonIcon();
         NexpaqHeader.showBackButton();
+        this.cleanAll();
         if(typeof(Nexpaq) != 'undefined') this.getAllInfo();
 
         var element = this;
@@ -10405,12 +10845,16 @@ this.fire('dom-change');
       leave: function() {
         ResetNexpaqHeader();
       },
+      cleanAll: function() {
+        this.$.GatewaysInfo.innerHTML = '';
+        this.$.ModulesInfo.innerHTML = '';
+      },
       getAllInfo: function() {
 
         var text = '';
 
         var phone = Nexpaq.API.PhoneInfo.split(',').join('<br>');
-        phone += "<br><br>";
+        phone += '<br><br>';
 
         text += phone
         this.$.PhoneInfo.innerHTML = phone;
@@ -10429,6 +10873,7 @@ this.fire('dom-change');
             gateways += "<br><br>";
 
             for(var j = 0; j < gateway.Modules.length; j++) {
+              if(gateway.Modules[j] == null) continue;
               var module = gateway.Modules[j];
               modules += '<b>Module ' + i + ':' + j + "</b>: <br>";
               modules += element.moduleInfo(module);
@@ -10471,7 +10916,7 @@ this.fire('dom-change');
         info += 'UUID: ' + product.UUID + "<br>";
         info += 'BSLVersion: ' + product.BSLVersion + "<br>";
         info += 'HasApp: ' + product.HasApp + "<br>";
-        info += 'AppVersion: ' + product.AppVersion + "<br>";
+        info += 'AppVersion: ' + product.APPVersion + "<br>";
         info += 'Mode: ' + product.Mode + "<br>";
         info += 'TypeID: ' + product.TypeID + "<br>";
         info += 'Battery value: ' + product.Battery.Percent + "<br>";
@@ -10971,7 +11416,11 @@ this.fire('dom-change');
                     <span class="tabbar-label">Dashboard</span>
                 </a>
                 <a href="#settings-tab" class="tab-link">
-                    <i class="icon icon-settings"></i>
+                    <i class="icon icon-settings">
+                        <template is="dom-if" if="[[NotEqual(updatesAvailable, 0)]]">
+                            <span class="badge bg-red">[[updatesAvailable]]</span>
+                        </template>
+                    </i>
                     <span class="tabbar-label">Settings</span>
                 </a>
             </div>
@@ -10982,6 +11431,154 @@ this.fire('dom-change');
         Polymer({
             is: 'nexpaq-navbar',
             behaviors: [ElementBehavior],
+            properties: {
+                updatesAvailable: {
+                    type: Number
+                }
+            }
+        });
+    </script>
+</dom-module>
+<dom-module id="nexpaq-blocking-process" assetpath="elements/">
+    <template>
+        <style>
+            :host {
+                display: flex;
+                position: fixed;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                z-index: 10002;
+
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            :host:not([active]) {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            :host[platform="android"] {
+                color: white;
+                background-color: rgba(50, 50, 50, 0.9);
+            }
+
+            :host[platform="ios"] {
+                color: black;
+                background-color: rgba(0, 0, 0, 0.57);
+            }
+
+            .content {
+                text-align: center;
+                width: 100%;
+            }
+
+            :host[platform="android"] .content {
+                padding: 0 65px;
+                box-sizing: border-box;
+            }
+
+            :host[platform="android"] .title {
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            :host[platform="android"] .text {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .progressbar {
+                width: 90%;
+            }
+            :host[platform="android"] .progressbar {
+                margin: 32px auto 0;
+            }
+
+            :host[platform="ios"] .content {
+                width: 270px;
+                border-radius: 13px;
+                background-color: rgba(255, 255, 255, 0.90);
+                padding: 32px 40px;
+                box-sizing: border-box;
+            }
+
+            :host[platform="ios"] .title {
+                font-size: 17px;
+                margin-bottom: 3px;
+            }
+
+            :host[platform="ios"] .text {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+
+            .percent {
+                text-align: center;
+                font-size: 12px;
+                margin-bottom: 13px;
+            }
+
+
+            :host:not([platform="ios"]) .percent {
+                display: none;
+            }
+
+            :host[platform="ios"] .progressbar {
+                margin: 0 auto;
+            }
+        </style>
+        
+        <div class="content">
+            <div class="title">[[title]]</div>
+            <div class="text">[[text]]</div>
+            <div class="percent">[[percent]]%</div>
+            <span class="progressbar" data-progress$="[[percent]]" id="progressbar"><span></span></span>
+        </div>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'nexpaq-blocking-process',
+            behaviors: [ElementBehavior],
+            properties: {
+                active: {
+                    type: Boolean,
+                    value: false,
+                    reflectToAttribute: true
+                },
+                title: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                text: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                percent: {
+                    type: Number,
+                    value: 0,
+                    reflectToAttribute: true,
+                    observer: 'percentObserver'
+                }
+            },
+            ready: function() {
+                var element = this;
+                window.addEventListener('WebComponentsReady', function(e) {
+                    FW7.setProgressbar(element.$.progressbar, element.percent);
+                });
+            },
+            percentObserver: function() {
+                if(typeof(FW7) != 'undefined') FW7.setProgressbar(this.$.progressbar, this.percent);
+            },
+            show: function() {
+                this.set('active', true);
+            },
+            hide: function() {
+                this.set('active', false);
+            }
         });
     </script>
 </dom-module>
@@ -11007,12 +11604,15 @@ this.fire('dom-change');
       <div class="view view-main">
         <div class="pages">
           <page-tile-selector data-page="tileSelector"></page-tile-selector>
+          <page-updates data-page="updates" updates-available="{{updatesAvailable}}"></page-updates>
           <page-licenses data-page="licenses"></page-licenses>
           <page-debug data-page="debug"></page-debug>
-          <page-dashboard data-page="index"></page-dashboard>
+          <page-dashboard data-page="index" updates-available="[[updatesAvailable]]"></page-dashboard>
         </div>
       </div>
     </div>    
+
+    <nexpaq-blocking-process id="blockingProcessOverlay"></nexpaq-blocking-process>
 
   </template>
   <script>
@@ -11020,11 +11620,15 @@ this.fire('dom-change');
       is: 'dashboard-app',
       behaviors: [ElementBehavior],
       properties: {
-        
+        updatesAvailable: {
+          type: Number
+        }
       },
       ready: function() {
+        window.blockingProcessOverlay = this.$.blockingProcessOverlay;
+
         document.addEventListener('NexpaqAPIReady', function() {
-          Nexpaq.API.RepositoryRequestString('/v1/' + Nexpaq.API.Branch + '/application/nexpaq.application.xamarin/manifest.json', applicationManifestReceivedHandler, function(error) { console.error(error); })
+          Nexpaq.API.RepositoryRequestString('/application/nexpaq.application.xamarin/manifest.json', applicationManifestReceivedHandler, function(error) { console.error(error); })
         });
       }
     });

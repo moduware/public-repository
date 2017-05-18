@@ -1,0 +1,7 @@
+body.platform-android .badge {
+    border-radius: 15px;
+}
+
+body.platform-android .icon .badge {
+    box-shadow: 0 0 0 2px white;
+}
