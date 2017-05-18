@@ -34,7 +34,7 @@
     "dataVariables": [
           {
             "name": "usbState",
-            "title": "UsbState",
+            "title": "Usb state",
             "description": "Gives the state of the USB.",
             "data": [0],
             "state": {
@@ -45,7 +45,7 @@
         },
         {
             "name": "sdCardState",
-            "title": "SdCardState",
+            "title": "Sd card state",
             "description": "Gives the state of the SD card",
             "data": [1],
             "state": {
