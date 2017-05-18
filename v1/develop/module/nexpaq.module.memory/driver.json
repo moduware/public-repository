@@ -5,7 +5,7 @@
         {
             "name": "StatusCheck",
             "title": "Checks the status of Memory module",
-            "description": "To work with memory module and read data, sd card must be inserted first.",
+            "description": "To work with Memory module and read data, SD card must be inserted first.",
             "command": "2702"
         },
         {
@@ -35,7 +35,7 @@
           {
             "name": "usbState",
             "title": "UsbState",
-            "description": "Gives the state of the usb",
+            "description": "Gives the state of the USB.",
             "data": [0],
             "state": {
                 "01":"usbPowered",
@@ -46,7 +46,7 @@
         {
             "name": "sdCardState",
             "title": "SdCardState",
-            "description": "Gives the state of the sdCard",
+            "description": "Gives the state of the SD card",
             "data": [1],
             "state": {
                 "01" : "sdCardIn",
@@ -57,7 +57,7 @@
         {
             "name": "status",
             "title": "Status",
-            "description": "Gives the status of memory module",
+            "description": "Gives the status of Memory module",
             "data": [0],
             "format": "({0})",
             "source": "data"
