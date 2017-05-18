@@ -2,6 +2,7 @@
     "id": "nexpaq.application.xamarin",
 	"name": "Xamarin nexpaq App",
 	"description": "Nexpaq application based on xamarin technology, version for developers.",
-    "version": "1.0.1",
+    "changes": "Added updates manager and better module initialization sequence",
+    "version": "1.0.2",
     "link": "https://nexpaq.com/app-dev"
 }
