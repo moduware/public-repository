@@ -3,3 +3,7 @@ Changelog
 === 1.0.1 Picard
 - bugfix of iOS crash when launch on app version with 3 digits in version
 - bugfix of dynamic driver loading from JS
+
+=== 1.0.2 Picard
+- new module initialisation sequence that is more stable and now "unknown" modules will appear not that often
+- updates manager, it will notify user about any available tile updates and will check updates automatically on startup
