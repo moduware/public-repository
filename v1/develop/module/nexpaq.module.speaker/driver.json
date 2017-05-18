@@ -1,0 +1,47 @@
+{
+    "type": "nexpaq.module.speaker",
+    "version": "1.0.0",
+    "commands": [
+        {
+            "name": "StatusCheck",
+            "title": "Checks the status of Speaker module",
+            "description": "To work with Speaker module, Speaker module must be plugged in.",
+            "command": "2702"
+        },
+        {
+            "name": "Connect",
+            "title": "Connects to the Speaker module.",
+            "description": "Connects to the Speaker that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 1
+                }
+            ]
+        },
+        {
+            "name": "Disconnect",
+            "title": "Disconnects from the Speaker module.",
+            "description": "Disconnects from Speaker that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
+        }
+    ],
+    "dataVariables": [
+          {
+            "name": "status",
+            "title": "Status",
+            "description": "Gives the status of the Speaker module.",
+            "data": [0],
+            "state": {
+                "01":"pluggedIn",
+                "00": "pluggedOut"
+            },
+            "source": "response"
+        }
+    ]
+}
