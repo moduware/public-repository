@@ -1,0 +1,47 @@
+{
+    "type": "nexpaq.module.usbflash",
+    "version": "1.0.2",
+    "commands": [
+        {
+            "name": "StatusCheck",
+            "title": "Checks the status of USB flash module",
+            "description": "To work with USB flash module and read data, USB flash module must be plugged in.",
+            "command": "2702"
+        },
+        {
+            "name": "Connect",
+            "title": "Connects to the USB flash",
+            "description": "Connects to the USB flash that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 1
+                }
+            ]
+        },
+        {
+            "name": "Disconnect",
+            "title": "Disconnects from the USB flash",
+            "description": "Disconnects from USB flash that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
+        }
+    ],
+    "dataVariables": [
+          {
+            "name": "status",
+            "title": "Status",
+            "description": "Gives the status of the USB flash module.",
+            "data": [0],
+            "state": {
+                "01":"pluggedIn",
+                "00": "pluggedOut"
+            },
+            "source": "data"
+        }
+    ]
+}
