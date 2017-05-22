@@ -1,0 +1,66 @@
+{
+    "type": "nexpaq.module.sd",
+    "version": "1.0.2",
+    "commands": [
+        {
+            "name": "StatusCheck",
+            "title": "Checks the status of SD module.",
+            "description": "To work with SD module and read data, SD card must be inserted first.",
+            "command": "2702"
+        },
+        {
+            "name": "Connect",
+            "title": "Connects to the SD card.",
+            "description": "Connects to the SD card that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 1
+                }
+            ]
+        },
+        {
+            "name": "Disconnect",
+            "title": "Disconnects from the SD card",
+            "description": "Disconnects from the SD card that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
+        }
+    ],
+    "dataVariables": [
+          {
+            "name": "usbState",
+            "title": "UsbState",
+            "description": "Gives the state of the USB.",
+            "data": [0],
+            "state": {
+                "01":"usbPowered",
+                "00": "usbUnpowered"
+            },
+            "source": "response"
+        },
+        {
+            "name": "sdCardState",
+            "title": "SdCardState",
+            "description": "Gives the state of the SD card.",
+            "data": [1],
+            "state": {
+                "01" : "sdCardIn",
+                "00" : "sdCardOut"
+            },
+            "source": "response"
+        },
+        {
+            "name": "status",
+            "title": "Status",
+            "description": "Gives the status of SD module.",
+            "data": [0],
+            "format": "({0})",
+            "source": "data"
+        }
+    ]
+}
