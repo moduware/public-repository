@@ -7,5 +7,6 @@
 	"changes": "Improved battery state reporting and power management.",
 
 	"ble_version": "1.1.7",
+	"ble_changes": "MSP reset bugfix, power saving mode, faster batpaq turn off, system reset function",
 	"min_ble_version": "1.1.5"
 }
