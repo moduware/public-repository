@@ -1,0 +1,17 @@
+{
+  "id": "nexpaq.tile.laser",
+  "name": "Laser Pointer",
+  "description": "Nexpaq Laser Pointer tile module interface",
+
+  "version": "1.0.0",
+  "changes": "This is the version that supports new nexpaq API and Header.",
+  "app_version": "1.0.0",
+  "modules": [
+    "nexpaq.module.laser",
+    "nexpaq.module.range"
+  ],
+  
+  "title": "Laser",
+  "color": "#EE3696",
+  "text_color": "white"
+}
