@@ -41,7 +41,7 @@
                 "01":"usbPowered",
                 "00": "usbUnpowered"
             },
-            "source": "data"
+            "source": "response"
         },
         {
             "name": "sdCardState",
@@ -52,14 +52,17 @@
                 "01" : "sdCardIn",
                 "00" : "sdCardOut"
             },
-            "source": "data"
+            "source": "response"
         },
         {
             "name": "status",
             "title": "Status",
             "description": "Gives the status of Memory module",
             "data": [0],
-            "format": "({0})",
+            "state": {
+                "01":"pluggedIn",
+                "00": "pluggedOut"
+            },
             "source": "data"
         }
     ]

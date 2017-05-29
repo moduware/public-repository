@@ -59,7 +59,10 @@
             "title": "Status",
             "description": "Gives the status of SD module.",
             "data": [0],
-            "format": "({0})",
+            "state": {
+                "01":"pluggedIn",
+                "00": "pluggedOut"
+            },
             "source": "data"
         }
     ]
