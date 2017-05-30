@@ -4,7 +4,9 @@
 	"description": "The batpaq is a standalone device that works the same as the phonepaq but with any mobile device. It is the first modular power bank that can charge your phone over 3 times over.",
 	
 	"firmware_version": "1.0.13",
+	"changes": "Improved battery state reporting and power management.",
 
 	"ble_version": "1.1.7",
+	"ble_changes": "MSP reset bugfix, power saving mode, faster batpaq turn off, system reset function",
 	"min_ble_version": "1.1.5"
 }
