@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.sd-testing",
+  "name": "SD",
+  "description": "Nexpaq SD tile module interface for testing",
+
+  "version": "1.0.1",
+  "changes": "This is version that supports new nexpaq API",
+  "app_version": "1.0.3",
+  "modules": [
+    "nexpaq.module.sd"
+  ],
+  
+  "title": "SD Card",
+  "color": "black",
+  "text_color": "white"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.sd",
+  "name": "SD",
+  "description": "Nexpaq SD tile module interface",
+
+  "version": "1.0.0",
+  "changes": "This is version that supports new nexpaq API",
+  "app_version": "1.0.0",
+  "modules": [
+    "nexpaq.module.sd"
+  ],
+  
+  "title": "SD Card",
+  "color": "#D43755",
+  "text_color": "#FFFFFF"
+}
