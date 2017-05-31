@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.speaker",
+  "name": "Speaker",
+  "description": "Nexpaq Speaker module interface",
+
+  "version": "1.0.0",
+  "changes": "This is version that supports new nexpaq API",
+  "app_version": "1.0.3",
+  "modules": [
+    "nexpaq.module.speaker"
+  ],
+  
+  "title": "Speaker",
+  "color": "#DF5250",
+  "text_color": "white"
+}
