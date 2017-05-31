@@ -1,6 +1,6 @@
 {
     "type": "nexpaq.module.sd",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "commands": [
         {
             "name": "StatusCheck",
@@ -31,39 +31,70 @@
             ]
         }
     ],
-    "dataVariables": [
-          {
-            "name": "usbState",
-            "title": "UsbState",
-            "description": "Gives the state of the USB.",
-            "data": [0],
-            "state": {
-                "01":"usbPowered",
-                "00": "usbUnpowered"
-            },
-            "source": "response"
+    "data": [
+        {
+            "name": "StateChangeResponse",
+            "title": "State Change Reponse",
+            "description": "Response to state change command",
+            "source": "2701",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of connect or disconnect request",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    }
+                }
+            ]
         },
         {
-            "name": "sdCardState",
-            "title": "SdCardState",
-            "description": "Gives the state of the SD card.",
-            "data": [1],
-            "state": {
-                "01" : "sdCardIn",
-                "00" : "sdCardOut"
-            },
-            "source": "response"
+            "name": "StatusRequestResponse",
+            "title": "Status Request Reponse",
+            "description": "Response to status request",
+            "source": "2703",
+            "variables": [
+                {
+                    "name": "status",
+                    "title": "Status",
+                    "description": "Indicates if module mounted as USB device",
+                    "data": [0],
+                    "state": {
+                        "00": "disconnected",
+                        "01": "connected"
+                    }
+                },
+                {
+                    "name": "sd_card_status",
+                    "title": "SD Card Status",
+                    "description": "Status of SD card, can be inserted or not",
+                    "data": [1],
+                    "state": {
+                        "00": "not_inserted",
+                        "01": "inserted"
+                    }
+                }
+            ]
         },
         {
-            "name": "status",
-            "title": "Status",
-            "description": "Gives the status of SD module.",
-            "data": [0],
-            "state": {
-                "01":"pluggedIn",
-                "00": "pluggedOut"
-            },
-            "source": "data"
+            "name": "StateChanged",
+            "title": "State Changed",
+            "description": "State of module changed",
+            "source": "2800",
+            "variables": [
+                {
+                    "name": "sd_card_status",
+                    "title": "SD Card Status",
+                    "description": "Status of SD card, can be inserted or not",
+                    "data": [1],
+                    "state": {
+                        "00": "not_inserted",
+                        "01": "inserted"
+                    }
+                }
+            ]
         }
-    ]
+    ] 
 }
