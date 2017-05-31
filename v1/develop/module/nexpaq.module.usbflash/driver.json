@@ -34,7 +34,7 @@
     "data": [
         {
             "name": "StateChangeResponse",
-            "title": "StateC hange Reponse",
+            "title": "State Change Reponse",
             "description": "Response to state change command",
             "source": "2701",
             "variables": [
