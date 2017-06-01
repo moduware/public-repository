@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.led-testing",
+  "name": "LED",
+  "description": "Nexpaq LED tile module interface for testing",
+
+  "version": "1.0.0",
+  "changes": "This is version that supports new nexpaq API",
+  "app_version": "1.0.0",
+  "modules": [
+    "nexpaq.module.led"
+  ],
+  
+  "title": "LED",
+  "color": "black",
+  "text_color": "white"
+}
