@@ -50,6 +50,7 @@
             "arguments": [
                 {
                     "name": "LedIndex",
+                    "description": "Integer made of byte where bits indicate leds to set 0-5",
                     "validation": "({0} >= 0) and ({0} <= 5)"
                 },
                 {
