@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.memory-testing",
+  "name": "Memory",
+  "description": "Nexpaq Memory tile module interface for testing",
+
+  "version": "1.0.0",
+  "changes": "This is version that supports new nexpaq API",
+  "app_version": "1.0.3",
+  "modules": [
+    "nexpaq.module.memory"
+  ],
+  
+  "title": "Backup",
+  "color": "black",
+  "text_color": "white"
+}
