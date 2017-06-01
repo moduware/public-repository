@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.battery",
+  "name": "Battery",
+  "description": "Nexpaq tile for Battery module",
+
+  "version": "1.0.0",
+  "changes": "This is version that supports new nexpaq API",
+  "app_version": "1.0.3",
+  "modules": [
+    "nexpaq.module.battery"
+  ],
+  
+  "title": "Battery",
+  "color": "#92CE4C",
+  "text_color": "white"
+}
