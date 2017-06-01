@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.hotkeys-testing",
+  "name": "HotKeys",
+  "description": "Nexpaq Hotkeys module interface for testing",
+
+  "version": "1.0.0",
+  "changes": "Works with new NexpaqHeader and API",
+  "app_version": "1.0.3",
+  "modules": [
+    "nexpaq.module.hotkeys"
+  ],
+  
+  "title": "HotKeys",
+  "color": "black",
+  "text_color": "white"
+}
