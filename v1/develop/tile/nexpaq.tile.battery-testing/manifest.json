@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.battery-testing",
+  "name": "Battery",
+  "description": "Nexpaq Battery module interface for testing",
+
+  "version": "1.0.0",
+  "changes": "This is version that supports new nexpaq API",
+  "app_version": "1.0.3",
+  "modules": [
+    "nexpaq.module.battery"
+  ],
+  
+  "title": "Battery",
+  "color": "black",
+  "text_color": "white"
+}
