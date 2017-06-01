@@ -46,7 +46,7 @@
             "name": "SetOneLEDInRGB",
             "title": "Set One LED in RGB",
             "description": "Set particular LED in mudule to specific RGB color",
-            "command": "2709",
+            "command": "2708",
             "arguments": [
                 {
                     "name": "LedIndex",
