@@ -1,0 +1,34 @@
+{
+    "type": "nexpaq.module.hotkeys",
+    "version": "1.0.0",
+    "data": [
+        {
+            "name": "HotKeysStateChanged",
+            "title": "HotKeys State Changed",
+            "description": "Configuration of HotKeys Changed",
+            "source": "2800",
+            "variables": [
+                {
+                    "name": "outer_button_state",
+                    "title": "Outer Button State",
+                    "description": "State of outer button on hotkeys",
+                    "data": [0],
+                    "state": {
+                        "00": "released",
+                        "01": "pressed"
+                    }
+                },
+                {
+                    "name": "inner_button_state",
+                    "title": "Inner Button State",
+                    "description": "State of inner button on hotkeys",
+                    "data": [1],
+                    "state": {
+                        "00": "released",
+                        "01": "pressed"
+                    }
+                }
+            ]
+        }
+    ]
+}
