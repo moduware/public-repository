@@ -1,6 +1,6 @@
 {
     "type": "nexpaq.module.airq",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "commands": [
         {
             "name": "StartSensor",
@@ -25,25 +25,56 @@
             ]
         }
     ],
-    "dataVariables": [
+    "data": [
         {
-            "name": "state",
-            "title": "State",
-            "description": "Notifies state of the sensor",
-            "data": [0, 1],
-            "state": {
-                "FFFF": "heating",
-                "FF00": "updating reference"
-            },
-            "source": "data"
+            "name": "StateChangeResponse",
+            "title": "State Change Response",
+            "description": "Respone to turn sensor on or off request",
+            "source": "2701",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Request result",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    }
+                }
+            ]
         },
         {
-            "name": "adc",
-            "title": "ADC value",
-            "description": "ADC value detected by AirQ module for gas pollution level",
-            "data": [0, 1],
-            "format": "({0} * 256 + {1})",
-            "source": "data"
+            "name": "SensorValue",
+            "title": "Sensor Value",
+            "description": "Value from module sensor",
+            "source": "2800",
+            "variables": [
+                {
+                    "name": "status",
+                    "title": "Status",
+                    "description": "Status of sensor",
+                    "data": [0, 1],
+                    "state": {
+                        "FFFF": "heating",
+                        "FF00": "updating_referrence"
+                    }
+                },
+                {
+                    "name": "adc_value",
+                    "title": "ADC Value",
+                    "description": "ADC value from sensor",
+                    "data": [0, 1],
+                    "format": "({0} * 256 + {1})"
+                },
+                {
+                    "name": "level",
+                    "title": "Level",
+                    "description": "Firmware calculated level (not recommended to use)",
+                    "data": [2],
+                    "format": "{0}"
+                }
+            ]
         }
     ]
 }
