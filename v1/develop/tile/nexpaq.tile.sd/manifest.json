@@ -3,8 +3,8 @@
   "name": "SD",
   "description": "Nexpaq SD tile module interface",
 
-  "version": "1.0.0",
-  "changes": "This is version that supports new nexpaq API",
+  "version": "1.0.1",
+  "changes": "Smaller size of package",
   "app_version": "1.0.0",
   "modules": [
     "nexpaq.module.sd"
