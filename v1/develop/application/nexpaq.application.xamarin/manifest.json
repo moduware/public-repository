@@ -2,7 +2,7 @@
     "id": "nexpaq.application.xamarin",
 	"name": "Xamarin nexpaq App",
 	"description": "Nexpaq application based on xamarin technology, version for developers.",
-    "changes": "Added updates manager and better module initialization sequence",
-    "version": "1.0.2",
+    "changes": "Firmware and BLE updates, better driver data system, bugfixes",
+    "version": "1.0.3",
     "link": "https://nexpaq.com/app-dev"
 }
