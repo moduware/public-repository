@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AirQ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <link rel="stylesheet" type="text/css" href="vendor/mdl/material-design.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+
+
+    <!-- vendor -->
+   
+
+    <!-- nexpaq libs -->
+    <script type="text/javascript" src="js/NexpaqHeader.js"></script>
+
+    <!-- partials -->
+    <script type="text/javascript" src="vendor/mdl/materialDesign.js"></script>
+   
+    <!-- screens -->
+
+    <!-- tools-->
+    <script type="text/javascript" src="js/circularProgressBar.js"></script>
+
+    <!-- core -->
+    <script type="text/javascript" src="js/variables.js"></script>
+    <script type="text/javascript" src="js/native.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper" data-level="0">
+      
+      <div id="main-screen" class="main-screen mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <div class="heating-screen" id="heating-screen">
+            <div class="warming-text" id="warming-text">Warming...</div>
+            <div class="text" id="text">Please wait while the module heats up</div>
+          </div>
+
+          <div class="result-screen hidden" id="result-screen">
+            <div class="warming-info">This module takes continous measurements. For accurate results, please wait around 15 minutes. Value can be affected by environment, use for referrence only</div>
+            <div class="result-svg">
+              <img id="result-svg" src="img/none.svg">
+            </div>
+            <div class="pollution-text" id="pollution-text">Pollution</div>
+            <div class="result-title" id="result-title">None</div>
+            <button class="button-snapshot mdl-button--raised" id="button-snapshot">Create Snapshot</button>
+          </div>
+
+          <div class="snapshot-screen hidden" id="snapshot-screen">
+          <table class="measurement_table" id="measurement_table">
+            <thead>
+              <th><input type="text" id="label" placeholder="Add Label"></th>
+            </thead>
+            <tr>
+              <td class="name">Pollution</td>
+              <td class="result-value" id="result-value">None</td>
+            </tr>
+            <tr>
+              <td class="date" id="date">Date</td>
+              <td class="time" id="time">Time</td>
+            </tr>
+          </table>
+          <div class="button-container">
+            <button class="button-cancel" id="button-cancel">Cancel</button>
+            <button class="button-history hidden" id="button-history">Save To History</button>
+          </div>
+        </div>
+        <div id="snackbar">Saved</div>
+
+      </div>
+   
+ </body>
+</html>
