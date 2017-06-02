@@ -51,7 +51,7 @@ function main() {
     .then(() => {
         console.log(`Drivers downloaded\n`);
         // Download all manifests
-        var manifests_list = config.modules.concat(config.tiles);
+        var manifests_list = config.modules.concat(config.tiles, config.gateways);
         return DownloadManifests(manifests_list);
     })
     .then(() => {

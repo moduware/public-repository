@@ -1,5 +1,13 @@
 {
     "products_url": "http://api.nexpaq.com/v1/product/list",
+    "gateways": [
+        "nexpaq.gateway.batpaq",
+        "nexpaq.gateway.samsungs6e",
+        "nexpaq.gateway.samsungs6",
+        "nexpaq.gateway.minidev",
+        "nexpaq.gateway.iphone6",
+        "nexpaq.gateway.default"
+    ],
     "modules": [
         "nexpaq.module.hotkeys",
         "nexpaq.module.sd",
