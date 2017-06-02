@@ -6,6 +6,5 @@
 	"firmware_version": "0.0.0",
 
   "size": 1,
-	"orientation": "up",
-	"default-tile": "maxim.tile.devmod"
+	"orientation": "up"
 }
