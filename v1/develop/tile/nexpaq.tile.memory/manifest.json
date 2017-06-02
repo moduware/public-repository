@@ -3,8 +3,8 @@
   "name": "Memory",
   "description": "Nexpaq Memory tile module interface",
 
-  "version": "1.0.0",
-  "changes": "This is version that supports new nexpaq API",
+  "version": "1.0.1",
+  "changes": "Small package",
   "app_version": "1.0.3",
   "modules": [
     "nexpaq.module.memory"

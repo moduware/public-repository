@@ -3,8 +3,8 @@
   "name": "Laser Pointer",
   "description": "Nexpaq Laser Pointer tile module interface",
 
-  "version": "1.0.1",
-  "changes": "Can detect when laser is on and when it is off on tile open.",
+  "version": "1.0.2",
+  "changes": "Smaller package size.",
   "app_version": "1.0.3",
   "modules": [
     "nexpaq.module.laser",
