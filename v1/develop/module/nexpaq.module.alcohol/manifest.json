@@ -1,7 +1,7 @@
 {
 	"id": "nexpaq.module.alcohol",
-	"name": "Alcohol",
-	"description": "nexpaq Alcohol sensor module",
+	"name": "Contaminants",
+	"description": "nexpaq Air Contaminants sensor module",
 
 	"firmware_version": "1.0.0",
 
