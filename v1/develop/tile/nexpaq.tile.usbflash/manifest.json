@@ -3,8 +3,8 @@
   "name": "USB Flash",
   "description": "Nexpaq USB flash tile",
 
-  "version": "1.0.0",
-  "changes": "This is version that supports new nexpaq API",
+  "version": "1.0.1",
+  "changes": "Decreased package size",
   "app_version": "1.0.3",
   "modules": [
     "nexpaq.module.usbflash"
