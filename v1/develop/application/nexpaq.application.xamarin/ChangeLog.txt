@@ -7,3 +7,12 @@ Changelog
 === 1.0.2 Picard
 - new module initialisation sequence that is more stable and now "unknown" modules will appear not that often
 - updates manager, it will notify user about any available tile updates and will check updates automatically on startup
+
+=== 1.0.3 Picard
+- Firmware and BLE updates
+- Support of updated driver data system
+
+=== 1.0.4 Picard
+- Driver request optimisation
+- Communication log on debug screen
+- iOS UI bugfixes
