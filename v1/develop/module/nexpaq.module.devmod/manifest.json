@@ -3,8 +3,5 @@
 	"name": "DevMod",
 	"description": "Development module for module development and prototyping.",
 
-	"firmware_version": "0.0.0",
-
-  "size": 1,
-	"orientation": "up"
+  "size": 1
 }

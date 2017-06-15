@@ -3,10 +3,13 @@
 	"name": "LED",
 	"description": "nexpaq module with 6 multicolor LED and 2 flash elements",
 
-	"firmware_version": "1.0.3",
+	"firmwareVersion": "1.0.3",
 	"changes": "Updated to MDK 1.0.7, bug fix when LED flash elements couldn't be completely turned off",
 
   "size": 1,
 	"orientation": "up",
+	"defaultTile": "nexpaq.tile.led",
+
+	"firmware_version": "1.0.3",
 	"default-tile": "nexpaq.tile.led"
 }

@@ -3,9 +3,12 @@
 	"name": "Laser",
 	"description": "nexpaq Laser pointer module",
 
-  "firmware_version": "1.0.2",
+  "firmwareVersion": "1.0.2",
 
 	"size": 1,
 	"orientation": "up",
+	"defaultTile": "nexpaq.tile.laser",
+
+	"firmware_version": "1.0.2",
 	"default-tile": "nexpaq.tile.laser"
 }

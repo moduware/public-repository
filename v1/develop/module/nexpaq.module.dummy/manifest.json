@@ -3,8 +3,5 @@
 	"name": "Dummy",
 	"description": "nexpaq Dummy module that do nothing.",
 
-  "firmware_version": "0.0.0",
-
-	"size": 1,
-	"orientation": "up"
+	"size": 1
 }

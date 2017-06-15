@@ -3,9 +3,12 @@
 	"name": "Speaker",
 	"description": "nexpaq Speaker module, works via USB",
 
-  "firmware_version": "1.0.0",
+  "firmwareVersion": "1.0.0",
 	
 	"size": 3,
 	"orientation": "up",
+	"defaultTile": "nexpaq.tile.speaker",
+
+	"firmware_version": "1.0.0",
 	"default-tile": "nexpaq.tile.speaker"
 }
