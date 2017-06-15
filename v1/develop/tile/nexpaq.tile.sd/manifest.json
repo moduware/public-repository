@@ -5,12 +5,15 @@
 
   "version": "1.0.1",
   "changes": "Smaller size of package",
-  "app_version": "1.0.0",
+  "minimumAppVersion": "1.0.0",
   "modules": [
     "nexpaq.module.sd"
   ],
   
   "title": "SD Card",
   "color": "#D43755",
-  "text_color": "#FFFFFF"
+  "textColor": "white",
+
+  "app_version": "1.0.0",
+  "text_color": "white"
 }

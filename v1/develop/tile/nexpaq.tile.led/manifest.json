@@ -5,12 +5,15 @@
 
   "version": "1.1.2",
   "changes": "Smaller package size",
-  "app_version": "1.0.0",
+  "minumumAppVersion": "1.0.0",
   "modules": [
     "nexpaq.module.led"
   ],
   
   "title": "LED",
   "color": "#40CF9A",
-  "text_color": "white"
+  "textColor": "white",
+
+  "app_version": "1.0.0",
+  "text_color": "white",
 }

@@ -5,7 +5,7 @@
 
   "version": "1.0.2",
   "changes": "Smaller package size.",
-  "app_version": "1.0.3",
+  "minimumAppVersion": "1.0.3",
   "modules": [
     "nexpaq.module.laser",
     "nexpaq.module.range"
@@ -13,5 +13,8 @@
   
   "title": "Laser",
   "color": "#EE3696",
+  "textColor": "white",
+
+  "app_version": "1.0.3",
   "text_color": "white"
 }

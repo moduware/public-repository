@@ -5,12 +5,15 @@
 
   "version": "1.0.1",
   "changes": "Decreased size of package",
-  "app_version": "1.0.3",
+  "minimumAppVersion": "1.0.3",
   "modules": [
     "nexpaq.module.speaker"
   ],
   
   "title": "Speaker",
   "color": "#DF5250",
+  "textColor": "white",
+
+  "app_version": "1.0.3",
   "text_color": "white"
 }

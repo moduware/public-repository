@@ -5,7 +5,7 @@
 
   "version": "1.0.1",
   "changes": "Table with laser and cover states, now works with improved driver API",
-  "app_version": "1.0.3",
+  "minimumAppVersion": "1.0.3",
   "modules": [
     "nexpaq.module.laser",
     "nexpaq.module.range"
@@ -13,5 +13,8 @@
   
   "title": "Laser",
   "color": "black",
+  "textColor": "white",
+
+  "app_version": "1.0.3",
   "text_color": "white"
 }
