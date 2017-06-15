@@ -3,5 +3,7 @@
 	"name": "Samsung S6 Edge Phonepaq",
 	"description": "The phonepaq is the world’s first truly modular case that allows your smartphone to do more. How much more is up to you.",
 
+	"firmwareVersion": "0.5.4",
+
 	"firmware_version": "0.5.4"
 }
