@@ -3,5 +3,7 @@
 	"name": "Dummy",
 	"description": "nexpaq Dummy module that do nothing.",
 
-	"size": 1
+	"size": 1,
+
+	"defaultTile": "nexpaq.tile.dummy"
 }
