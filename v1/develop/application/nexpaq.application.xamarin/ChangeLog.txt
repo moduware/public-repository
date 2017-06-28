@@ -16,3 +16,8 @@ Changelog
 - Driver request optimisation
 - Communication log on debug screen
 - iOS UI bugfixes
+
+=== 1.0.5 Picard
+- Better module init sequence
+- Friendly initial connect
+- Minor bug fixes

@@ -34,6 +34,7 @@
         "nexpaq.tile.range",
         "nexpaq.tile.sd",
         "nexpaq.tile.speaker",
-        "nexpaq.tile.usbflash"
+        "nexpaq.tile.usbflash",
+        "nexpaq.tile.dummy"
     ]
 }
