@@ -21,3 +21,9 @@ Changelog
 - Better module init sequence
 - Friendly initial connect
 - Minor bug fixes
+
+=== 1.0.6 Picard
+- Preservs custom user installed tiles
+- Much faster module initialisation
+- Android back button native behaviour
+- Initial resoruces extraction behind logo
