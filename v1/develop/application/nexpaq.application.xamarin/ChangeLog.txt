@@ -27,3 +27,7 @@ Changelog
 - Much faster module initialisation
 - Android back button native behaviour
 - Initial resoruces extraction behind logo
+
+=== 1.0.7 Picard
+- Dev module custom tiles bug fix
+- iOS tiles caching bug fix

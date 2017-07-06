@@ -2,7 +2,7 @@
     "id": "nexpaq.application.xamarin",
 	"name": "Xamarin nexpaq App",
 	"description": "Nexpaq application based on xamarin technology, version for developers.",
-    "changes": "Faster modules initialisation, preserve user tiles on update, android back button handling",
-    "version": "1.0.6",
+    "changes": "Dev module custom tiles bug fix, iOS tiles caching bug fix",
+    "version": "1.0.7",
     "link": "https://nexpaq.com/app-dev"
 }
