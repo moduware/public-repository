@@ -1,0 +1,40 @@
+{
+    "products_url": "http://api.nexpaq.com/v1/product/list",
+    "gateways": [
+        "nexpaq.gateway.batpaq",
+        "nexpaq.gateway.samsungs6e",
+        "nexpaq.gateway.samsungs6",
+        "nexpaq.gateway.minidev",
+        "nexpaq.gateway.iphone6",
+        "nexpaq.gateway.default"
+    ],
+    "modules": [
+        "nexpaq.module.hotkeys",
+        "nexpaq.module.sd",
+        "nexpaq.module.led",
+        "nexpaq.module.memory",
+        "nexpaq.module.speaker",
+        "nexpaq.module.usbflash",
+        "nexpaq.module.airq",
+        "nexpaq.module.alcohol",
+        "nexpaq.module.battery",
+        "nexpaq.module.range",
+        "nexpaq.module.dummy",
+        "nexpaq.module.devmod"
+    ],
+    "tiles": [
+        "nexpaq.tile.airq",
+        "nexpaq.tile.alcohol-testing",
+        "nexpaq.tile.battery",
+        "nexpaq.tile.hat",
+        "nexpaq.tile.hotkeys-testing",
+        "nexpaq.tile.laser",
+        "nexpaq.tile.led",
+        "nexpaq.tile.memory",
+        "nexpaq.tile.range",
+        "nexpaq.tile.sd",
+        "nexpaq.tile.speaker",
+        "nexpaq.tile.usbflash",
+        "nexpaq.tile.dummy"
+    ]
+}

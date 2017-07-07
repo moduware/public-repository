@@ -1,6 +1,6 @@
 {
     "type": "nexpaq.module.range",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "commands": [
        {
             "name": "TurnOnLaser",
@@ -29,12 +29,31 @@
     ],
     "dataVariables": [
         {
+            "_comment": "Keeping for backwards compatibility 1.0.0-1.0.2",
             "name": "distance",
             "title": "Distance",
             "description": "Measured distance to object",
             "data": [0, 1, 2, 3, 4, 5, 6],
             "convert": "StringUtf8",
             "source": "data"
+        }
+    ],
+    "data": [
+        {
+            "name": "DistanceChanged",
+            "title": "Distance Changed",
+            "description": "Measured distance changed",
+            "source": "2800",
+            "variables": [
+                {
+                    "name": "distance",
+                    "title": "Distance",
+                    "description": "Measured distance to object",
+                    "data": [0, 1, 2, 3, 4, 5, 6],
+                    "convert": "StringUtf8",
+                    "source": "data"
+                }
+            ]
         }
     ]
 }

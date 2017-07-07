@@ -1,11 +1,14 @@
 {
 	"id": "nexpaq.module.alcohol",
-	"name": "Alcohol",
-	"description": "nexpaq Alcohol sensor module",
+	"name": "Contaminants",
+	"description": "nexpaq Air Contaminants sensor module",
 
-	"firmware_version": "1.0.0",
+	"firmwareVersion": "1.0.0",
 
   "size": 1,
 	"orientation": "up",
-	"default-tile": "nexpaq.tile.alcohol"
+	"defaultTile": "nexpaq.tile.alcohol-testing",
+
+	"firmware_version": "1.0.0",
+	"default-tile": "nexpaq.tile.alcohol-testing"
 }

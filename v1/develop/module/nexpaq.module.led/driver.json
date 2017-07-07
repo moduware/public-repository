@@ -32,6 +32,42 @@
             }]
         },
         {
+            "name": "FlashLEDRedAndBlue",
+            "title": "Flash LED Red And Blue",
+            "description": "Flashed LED elements with red and blue color",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 6
+                }
+            ]
+        },
+        {
+            "name": "SetOneLEDInRGB",
+            "title": "Set One LED in RGB",
+            "description": "Set particular LED in mudule to specific RGB color",
+            "command": "2708",
+            "arguments": [
+                {
+                    "name": "LedIndex",
+                    "description": "Integer made of byte where bits indicate leds to set 0-5, like 00001001",
+                    "validation": "({0} >= 0) and ({0} <= 5)"
+                },
+                {
+                    "name": "Red",
+                    "validation": "({0} >= 0) and ({0} <= 255)"
+                },
+                {
+                    "name": "Green",
+                    "validation": "({0} >= 0) and ({0} <= 255)"
+                },
+                {
+                    "name": "Blue",
+                    "validation": "({0} >= 0) and ({0} <= 255)"
+                }
+            ]
+        },
+        {
             "name": "SetFlashes",
             "title": "Set Flash brightness",
             "description": "Configure brightness of flash elements",

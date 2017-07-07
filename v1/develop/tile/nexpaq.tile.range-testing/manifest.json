@@ -3,13 +3,17 @@
   "name": "Laser Distance",
   "description": "Nexpaq Laser distance module interface for testing",
 
-  "version": "1.0.0",
-  "app_version": "1.0.0",
+  "version": "1.0.1",
+  "changes": "New data system support, requires app 1.0.3",
+  "minimumAppVersion": "1.0.3",
   "modules": [
     "nexpaq.module.range"
   ],
   
   "title": "Distance",
   "color": "black",
+  "textColor": "white",
+
+  "app_version": "1.0.3",
   "text_color": "white"
 }

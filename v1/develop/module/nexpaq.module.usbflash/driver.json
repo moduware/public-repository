@@ -31,17 +31,42 @@
             ]
         }
     ],
-    "responseVariables": [
-          {
-            "name": "status",
-            "title": "Status",
-            "description": "Gives the status of the USB flash module.",
-            "data": [0],
-            "state": {
-                "01":"pluggedIn",
-                "00": "pluggedOut"
-            },
-            "source": "response"
+    "data": [
+        {
+            "name": "StateChangeResponse",
+            "title": "State Change Reponse",
+            "description": "Response to state change command",
+            "source": "2701",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of connect or disconnect request",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "StatusRequestResponse",
+            "title": "Status Request Reponse",
+            "description": "Response to status request",
+            "source": "2703",
+            "variables": [
+                {
+                    "name": "status",
+                    "title": "Status",
+                    "description": "Indicates if module mounted as USB device",
+                    "data": [0],
+                    "state": {
+                        "00": "disconnected",
+                        "01": "connected"
+                    }
+                }
+            ]
         }
     ]
 }

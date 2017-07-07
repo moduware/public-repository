@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "commands": [
         {
-            "name": "SetCharging",
+            "name": "SetCharge",
             "title": "Set battery to charge",
             "description": "Sets battery module to charge",
             "command": "2700",
@@ -14,7 +14,7 @@
             ]
         },
         {
-            "name": "SetDischarging",
+            "name": "SetDischarge",
             "title": "Set battery to discharge",
             "description": "Sets battery module to discharge",
             "command": "2700",
@@ -31,16 +31,29 @@
             "command": "2700",
             "data": [
                 {
+                    "defaultValue": 2
+                }
+            ]
+        },
+        {
+            "name": "SetShutdown",
+            "title": "Set battery to standby",
+            "description": "Sets battery module to standby",
+            "command": "2700",
+            "data": [
+                {
                     "defaultValue": 3
                 }
             ]
         },
+
         {
             "name": "CheckStatus",
             "title": "Check battery status",
             "description": "Checks battery module status",
             "command": "2702"
         },
+
         {
             "name": "SetChargeCurrent100",
             "title": "Set charge current to 100",
@@ -64,35 +77,76 @@
             ]
         }
     ],
-    "dataVariables": [
+    "data": [
         {
-            "name": "state",
-            "title": "State",
-            "description": "State of battery module",
-            "data": [0],
-            "state": {
-                "01": "charging",
-                "02": "discharging",
-                "03": "standby",
-                "04": "full"
-            },
-            "source": "data"
+            "name": "StateChangeResponse",
+            "title": "State Change Response",
+            "description": "Response to battery state change request",
+            "source": "2701",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of batter state change request",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    }
+                }
+            ]
         },
         {
-            "name": "voltage",
-            "title": "Voltage value",
-            "description": "Voltage value detected by module",
-            "data": [1, 2],
-            "format": "({0}.{1})",
-            "source": "data"
+            "name": "BatteryStateResponse",
+            "title": "Battery State Response",
+            "description": "Response to battery state request",
+            "source": "2703",
+            "variables": [
+                {
+                    "name": "status",
+                    "title": "Status",
+                    "description": "Status of module battery",
+                    "data": [0],
+                    "state": {
+                        "01": "charging",
+                        "02": "discharging",
+                        "03": "standby",
+                        "04": "full"
+                    }
+                },
+                {
+                    "name": "voltage",
+                    "title": "Voltage",
+                    "description": "Current voltage of module battery",
+                    "data": [1, 2],
+                    "format": "{0} + ( {1} / 100 )"
+                },
+                {
+                    "name": "percentage",
+                    "title": "Percentage",
+                    "description": "Current percentage of module battery",
+                    "data": [3],
+                    "format": "{0}"
+                }
+            ]
         },
         {
-            "name": "percentage",
-            "title": "Battery percentage",
-            "description": "Battery percentage detected by module",
-            "data": [3],
-            "format": "({0})",
-            "source": "data"
+            "name": "ChargeChangeResponse",
+            "title": "Charge Change Resource",
+            "description": "Response to charge change request",
+            "source": "2705",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of changing battery charge",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    }
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,16 @@
+{
+  "name": "application-repository-scripts",
+  "version": "1.0.0",
+  "description": "Scripts useful for this application in repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Chernov",
+  "license": "ISC",
+  "dependencies": {
+    "download": "^6.2.2",
+    "fs-extra": "^3.0.1",
+    "unzip": "^0.1.11"
+  }
+}

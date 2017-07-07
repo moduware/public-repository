@@ -3,9 +3,12 @@
 	"name": "Battery",
 	"description": "nexpaq Battery module.",
 
-  "firmware_version": "1.0.2",
+  "firmwareVersion": "1.0.2",
 	
 	"size": 3,
 	"orientation": "up",
+	"defaultTile": "nexpaq.tile.battery",
+
+	"firmware_version": "1.0.2",
 	"default-tile": "nexpaq.tile.battery"
 }

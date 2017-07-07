@@ -3,9 +3,12 @@
 	"name": "USB Flash",
 	"description": "nexpaq USB flash driver module",
 
-	"firmware_version": "1.0.2",
+	"firmwareVersion": "1.0.2",
 
   "size": 1,
 	"orientation": "up",
+	"defaultTile": "nexpaq.tile.usbflash",
+
+	"firmware_version": "1.0.2",
 	"default-tile": "nexpaq.tile.usbflash"
 }

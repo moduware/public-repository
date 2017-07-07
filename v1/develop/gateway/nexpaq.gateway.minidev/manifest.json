@@ -3,5 +3,7 @@
 	"name": "Mini Dev Board",
 	"description": "This is nexpaq Mini Developer's Board",
 
+	"firmwareVersion": "1.0.4",
+
 	"firmware_version": "1.0.4"
 }

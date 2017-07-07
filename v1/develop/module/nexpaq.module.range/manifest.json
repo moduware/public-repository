@@ -3,9 +3,12 @@
 	"name": "Laser Distance",
 	"description": "nexpaq Range module allows you to measure distance to object.",
 
-  "firmware_version": "0.0.3",
+  "firmwareVersion": "0.0.3",
 
 	"size": 2,
 	"orientation": "down",
+	"defaultTile": "nexpaq.tile.range",
+
+	"firmware_version": "0.0.3",
 	"default-tile": "nexpaq.tile.range"
 }

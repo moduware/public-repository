@@ -1,0 +1,19 @@
+{
+  "id": "nexpaq.tile.memory",
+  "name": "Memory",
+  "description": "Nexpaq Memory tile module interface",
+
+  "version": "1.0.1",
+  "changes": "Small package",
+  "minimumAppVersion": "1.0.3",
+  "modules": [
+    "nexpaq.module.memory"
+  ],
+  
+  "title": "Backup",
+  "color": "#5899DE",
+  "textColor": "white",
+
+  "app_version": "1.0.3",
+  "text_color": "white"
+}

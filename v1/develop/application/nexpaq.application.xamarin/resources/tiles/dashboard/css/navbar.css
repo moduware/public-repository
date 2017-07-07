@@ -1,9 +1,0 @@
-body.theme-pink .toolbar {
-    background-color: white;
-}
-body.platform-android .tabbar .tab-link-highlight {
-    background-color: #EE3696;
-}
-body.platform-android .toolbar .ripple-wave {
-    background: rgba(238, 54, 150, 0.3);
-}

@@ -1,6 +1,6 @@
 {
     "type": "nexpaq.module.laser",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "commands": [
         {
             "name": "TurnOnLaser",
@@ -23,19 +23,79 @@
                     "defaultValue": 0
                 }
             ]
+        },
+        {
+            "name": "RequestStatus",
+            "title": "Request Status",
+            "description": "Requests status of laser, is it on or off",
+            "command": "2702"
         }
     ],
-    "dataVariables": [
+    "data": [
         {
-            "name": "cover_state",
-            "title": "Cover State",
-            "description": "State of module cover",
-            "data": [0],
-            "state": {
-                "00": "closed",
-                "01": "open"
-            },
-            "source": "data"
+            "name": "StateChangeResponse",
+            "title": "State Change Response",
+            "description": "Response to turn on or off request",
+            "source": "2701",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of turning on or off this module",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    },
+                    "source": "data"
+                }
+            ]
+        },
+        {
+            "name": "LaserStateResponse",
+            "title": "Laser State Response",
+            "description": "Response to laser state request",
+            "source": "2703",
+            "variables": [
+                {
+                    "name": "cover_state",
+                    "title": "Cover state",
+                    "description": "State of mechanical cover on module",
+                    "data": [0],
+                    "state": {
+                        "00": "closed",
+                        "01": "open"
+                    }
+                },
+                {
+                    "name": "laser_state",
+                    "title": "Laser state",
+                    "description": "State of laser, can be on or off",
+                    "data": [1],
+                    "state": {
+                        "00": "off",
+                        "01": "on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "CoverStateChanged",
+            "title": "Cover State Changed",
+            "description": "State of module cover was changed",
+            "source": "2800",
+            "variables": [
+                {
+                    "name": "cover_state",
+                    "title": "Cover state",
+                    "description": "State of mechanical cover on module",
+                    "data": [0],
+                    "state": {
+                        "00": "closed",
+                        "01": "open"
+                    } 
+                }
+            ]
         }
     ]
 }
