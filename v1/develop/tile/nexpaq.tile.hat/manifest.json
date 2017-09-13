@@ -5,15 +5,12 @@
 
   "version": "1.1.2",
   "changes": "Smaller package size",
-  "minimumAppVersion": "1.0.3",
+  "app_version": "1.0.3",
   "modules": [
     "nexpaq.module.hat"
   ],
   
   "title": "Temperature",
   "color": "#FFB930",
-  "textColor": "white",
-
-  "app_version": "1.0.3",
   "text_color": "white"
 }
