@@ -1,8 +1,8 @@
-# np-public-sw-repository
-nexpaq Application repository
+# Public Repository
+Application public repository
 
 This repository can be found here:
 http://repository.nexpaq.com/
 
-Nexpaq or other developers can add their tiles, updates, firmware or modules by
+Developers can add their tiles, updates, firmware or modules by
 pull requests.
