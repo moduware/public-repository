@@ -2,7 +2,7 @@
     "id": "nexpaq.application.xamarin",
 	"name": "Moduware Application",
 	"description": "Moduware application based on xamarin technology, version for developers.",
-    "changes": "Moduware rebranding, no screenlock during long updates, better messages in updates mamanger, minor bugfixes",
-    "version": "1.0.8",
+    "changes": "Moduware rebranding final details, iOS 11 compatibility",
+    "version": "1.0.9",
     "link": "https://nexpaq.com/app-dev"
 }

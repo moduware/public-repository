@@ -1,5 +1,9 @@
 Changelog
 
+=== 1.0.9 Picard
+- Modware rebranding final details
+- iOS 11 compatibility
+
 === 1.0.8 Picard
 - Modware rebranding
 - Update screen repetitive updates bug fix
