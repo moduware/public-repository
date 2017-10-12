@@ -1,5 +1,11 @@
 {
 	"id": "moduware.gateway.modpaq",
 	"name": "Modpaq",
-	"description": "Modpaq is a standalone device with modular capability with 6 slots, and it also can provide your devices additional power when required."
+	"description": "Modpaq is a standalone device with modular capability with 6 slots, and it also can provide your devices additional power when required.",
+
+	"firmwareVersion": "2.0.4",
+	"changes": "600mA charging bugfix, keep charging when connected as USB slave, temperature protection toggle function.",
+
+	"bootloaderVersion": "0.0.14",
+	"bootloaderChanges": "Large UART packages support, MSP430 software reset function."
 }
