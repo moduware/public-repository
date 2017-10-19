@@ -1,0 +1,22 @@
+{
+  "id": "moduware.tile.led",
+  "name": "LED",
+  "description": "Moduware LED tile module interface",
+
+  "version": "0.0.1",
+  "changes": "Initial release",
+  "minumumAppVersion": "1.0.0",
+  "modules": [
+    "nexpaq.module.led"
+  ],
+  
+  "title": "LED",
+  "color": "red",
+  "textColor": "white",
+
+  "type": "native",
+  "installationLinks": {
+    "android": "http://google.com",
+    "ios": "http://apple.com"
+  }
+}
