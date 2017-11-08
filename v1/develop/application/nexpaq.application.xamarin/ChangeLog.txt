@@ -1,5 +1,10 @@
 Changelog
 
+=== 1.1.0 Sisko
+- Native tiles support
+- New developer's folder structure
+- iOS long load bug fix
+
 === 1.0.9 Picard
 - Modware rebranding final details
 - iOS 11 compatibility
