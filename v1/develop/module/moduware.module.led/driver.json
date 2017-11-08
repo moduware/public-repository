@@ -1,5 +1,5 @@
 {
-    "type": "nexpaq.module.led",
+    "type": "moduware.module.led",
     "version": "1.0.0",
     "commands": [
         {
