@@ -13,6 +13,7 @@
         "nexpaq.module.sd",
         "nexpaq.module.led",
         "moduware.module.led",
+        "moduware.module.speaker",
         "nexpaq.module.memory",
         "nexpaq.module.speaker",
         "nexpaq.module.usbflash",
