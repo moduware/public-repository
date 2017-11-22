@@ -1,0 +1,9 @@
+{
+	"id": "moduware.module.speaker",
+	"name": "Speaker",
+	"description": "Moduware Speaker module",
+	
+	"size": 3,
+	"orientation": "up",
+	"defaultTile": "moduware.tile.speaker"
+}
