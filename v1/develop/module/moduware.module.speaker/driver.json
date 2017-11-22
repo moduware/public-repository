@@ -4,8 +4,8 @@
     "commands": [
         {
             "name": "Connect",
-            "title": "Power on speaker",
-            "description": "Powers on speaker module.",
+            "title": "Turn on speaker",
+            "description": "Turns on speaker module.",
             "command": "2700",
             "data": [
                 {
@@ -15,8 +15,8 @@
         },
         {
             "name": "Disconnect",
-            "title": "Power off speaker",
-            "description": "Power off speaker module",
+            "title": "Turn off speaker",
+            "description": "Turn off speaker module",
             "command": "2700",
             "data": [
                 {
@@ -26,9 +26,37 @@
         },
         {
             "name": "StatusCheck",
-            "title": "Checks the status of Speaker module",
-            "description": "To work with Speaker module, Speaker module must be powered on.",
+            "title": "Status Check",
+            "description": "Checks the status of Speaker module, to work with Speaker module, speaker module must be turned on.",
             "command": "2702"
+        },
+        {
+            "name": "AskBluetoothName",
+            "title": "Ask Bluetooh Name",
+            "description": "Ask for module bluetooth name",
+            "command": "2704"
+        },
+        {
+            "name": "SetDefaultStateAsOn",
+            "title": "Set Default State As On",
+            "description": "Set module to turn on when powered",
+            "command": "2706",
+            "data": [
+                {
+                    "defaultValue": 1
+                }
+            ]
+        },
+        {
+            "name": "SetDefaultStateAsOff",
+            "title": "Set Default State As Off",
+            "description": "Set module to stay off when powered",
+            "command": "2706",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
         }
     ],
     "data": [
@@ -59,11 +87,43 @@
                 {
                     "name": "status",
                     "title": "Status",
-                    "description": "Indicates if module is powered up",
+                    "description": "Indicates if module is turned on or not",
                     "data": [0],
                     "state": {
                         "00": "disconnected",
                         "01": "connected"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "BluetoothNameRequestResponse",
+            "title": "Bluetooth Name Request Response",
+            "description": "Response to request of bluetooth name of speaker module",
+            "source": "2705",
+            "variables": [
+                {
+                    "name": "bluetoothName",
+                    "title": "Bluetooth Name",
+                    "descirpiton": "Speaker module bluetooth name",
+                    "convert": "StringUtf8"
+                }
+            ]
+        },
+        {
+            "name": "DefaultStateChangeRequestResponse",
+            "title": "Default State Change Request Response",
+            "description": "Response to request of configuring new default state",
+            "source": "2707",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of changing default state",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
                     }
                 }
             ]
