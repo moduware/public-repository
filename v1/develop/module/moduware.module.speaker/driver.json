@@ -93,6 +93,16 @@
                         "00": "disconnected",
                         "01": "connected"
                     }
+                },
+                {
+                    "name": "defaultState",
+                    "title": "Default State",
+                    "description": "Indicates default state for module when it is connected",
+                    "data": [0],
+                    "state": {
+                        "00": "disconnected",
+                        "01": "connected"
+                    }
                 }
             ]
         },
