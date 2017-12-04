@@ -2,7 +2,7 @@
     "id": "nexpaq.application.xamarin",
 	"name": "Moduware Application",
 	"description": "Moduware application based on xamarin technology, version for developers.",
-    "changes": "Native tiles support, new developers folder",
-    "version": "1.1.0",
+    "changes": "new dev folder, faster ios start time, ios stability, devmod bugfixes, remiving dev postfix",
+    "version": "1.1.1",
     "link": "https://moduware.com/app"
 }

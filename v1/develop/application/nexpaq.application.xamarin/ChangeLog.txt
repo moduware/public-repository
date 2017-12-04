@@ -1,5 +1,12 @@
 Changelog
 
+=== 1.1.1 Sisko
+- Developer's folder now moduware
+- Faster iOS start time
+- More stable to iOS breakdowns
+- DevMod bugfixes
+- Removing "Dev" postfix
+
 === 1.1.0 Sisko
 - Native tiles support
 - New developer's folder structure
