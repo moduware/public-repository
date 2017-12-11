@@ -1,5 +1,10 @@
 Changelog
 
+=== 1.1.2 Sisko
+- Bugfix for device search with paired devices
+- Setting button colour bugfix
+- Initial resource extraction label overlap over logo bugfix 
+
 === 1.1.1 Sisko
 - Developer's folder now moduware
 - Faster iOS start time

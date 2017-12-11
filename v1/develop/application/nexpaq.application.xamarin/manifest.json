@@ -2,7 +2,7 @@
     "id": "nexpaq.application.xamarin",
 	"name": "Moduware Application",
 	"description": "Moduware application based on xamarin technology, version for developers.",
-    "changes": "new dev folder, faster ios start time, ios stability, devmod bugfixes, remiving dev postfix",
-    "version": "1.1.1",
+    "changes": "device search bugfix, settings button color to gray, slash screen logo overlap text bugfix",
+    "version": "1.1.2",
     "link": "https://moduware.com/app"
 }
