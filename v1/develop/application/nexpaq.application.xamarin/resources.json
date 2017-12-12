@@ -1,6 +1,7 @@
 {
     "products_url": "http://api.moduware.com/v1/product/list",
     "gateways": [
+        "moduware.gateway.modpack",
         "nexpaq.gateway.batpaq",
         "nexpaq.gateway.samsungs6e",
         "nexpaq.gateway.samsungs6",
