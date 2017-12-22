@@ -1,0 +1,11 @@
+{
+	"id": "moduware.module.led",
+	"name": "LED",
+	"description": "Moduware module with 6 multicolor LED and 2 flash elements",
+
+	"changes": "Initial release",
+
+  "size": 1,
+	"orientation": "up",
+	"defaultTile": "nexpaq.tile.led"
+}

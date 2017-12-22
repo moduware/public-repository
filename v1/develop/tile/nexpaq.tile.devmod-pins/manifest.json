@@ -1,0 +1,16 @@
+{
+  "id": "nexpaq.tile.devmod-pins",
+  "name": "DevMod Pins",
+  "description": "Tile to control pins on MSP or MAX developer's module, loads custom module driver. Requires correct firmware.",
+
+  "version": "1.0.0",
+  "changes": "Initial release",
+  "minumumAppVersion": "1.0.5",
+  "modules": [
+    "nexpaq.module.devmod"
+  ],
+  
+  "title": "DevMod Pins",
+  "color": "black",
+  "textColor": "white"
+}

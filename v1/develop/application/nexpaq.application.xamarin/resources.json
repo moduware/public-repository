@@ -12,6 +12,7 @@
         "nexpaq.module.hotkeys",
         "nexpaq.module.sd",
         "nexpaq.module.led",
+        "moduware.module.led",
         "nexpaq.module.memory",
         "nexpaq.module.speaker",
         "nexpaq.module.usbflash",
