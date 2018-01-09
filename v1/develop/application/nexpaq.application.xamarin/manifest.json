@@ -2,7 +2,7 @@
     "id": "nexpaq.application.xamarin",
 	"name": "Moduware Application",
 	"description": "Moduware application based on xamarin technology, version for developers.",
-    "changes": "device search bugfix, settings button color to gray, slash screen logo overlap text bugfix",
-    "version": "1.1.2",
+    "changes": "Updated resources. Modpack modules layout bug fix.",
+    "version": "1.1.3",
     "link": "https://moduware.com/app"
 }

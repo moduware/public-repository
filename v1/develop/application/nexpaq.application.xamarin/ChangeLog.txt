@@ -1,5 +1,9 @@
 Changelog
 
+=== 1.1.3 Sisko
+- Updated resources
+- Modpack modules layout bug fix
+
 === 1.1.2 Sisko
 - Bugfix for device search with paired devices
 - Setting button colour bugfix
