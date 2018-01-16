@@ -93,7 +93,7 @@
                     "title": "Humidity",
                     "description": "Ambient humidity detected by module",
                     "data": [0, 1],
-                    "format": "175.75 * ({0} * 256 + {1} / 4 * 4) / 65536 - 46.85",
+                    "format": "({0} * 256 + {1}) * 125 / 65536 - 6",
                     "source": "data"
                 },
                 {
