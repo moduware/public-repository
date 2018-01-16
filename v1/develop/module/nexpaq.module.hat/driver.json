@@ -1,6 +1,6 @@
 {
     "type": "nexpaq.module.hat",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "commands": [
         {
             "name": "StartSensor",
@@ -42,35 +42,6 @@
                     "defaultValue": 0
                 }
             ]
-        }
-    ],
-    "dataVariables": [
-        {
-            "_comment": "For backwards compatibility with 1.0.0-1.0.2, should be removed",
-            "name": "humidity",
-            "title": "Humidity",
-            "description": "Ambient humidity detected by module",
-            "data": [0, 1],
-            "format": "175.75 * ({0} * 256 + {1} / 4 * 4) / 65536 - 46.85",
-            "source": "data"
-        },
-        {
-            "_comment": "For backwards compatibility with 1.0.0-1.0.2, should be removed",
-            "name": "ambient_temperature",
-            "title": "Ambient Temperature",
-            "description": "Ambient temperature detected by module",
-            "data": [4, 5],
-            "format": "({0} * 256 + {1}) * 0.02 - 273.15",
-            "source": "data"
-        },
-        {
-            "_comment": "For backwards compatibility with 1.0.0-1.0.2, should be removed",
-            "name": "object_temperature",
-            "title": "Object Temperature",
-            "description": "Object temperature detected by module",
-            "data": [2, 3],
-            "format": "({0} * 256 + {1}) * 0.02 - 273.15",
-            "source": "data"
         }
     ],
     "data": [
