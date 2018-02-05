@@ -6,6 +6,6 @@
 	"firmwareVersion": "1.0.0",
 	"changes": "Optimize the power management; Optimize SPI communication.",
 	
-	"ble_version": "1.1.2",
-	"ble_changes": "Added Pairing feature,pairing password: 000000; Added permit feature "
+	"bootloaderVersion": "1.1.2",
+	"bootloaderChanges": "Added Pairing feature,pairing password: 000000; Added permit feature "
 }
