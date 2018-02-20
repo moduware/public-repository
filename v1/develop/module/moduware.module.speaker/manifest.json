@@ -5,5 +5,5 @@
 	
 	"size": 3,
 	"orientation": "up",
-	"defaultTile": "moduware.tile.speaker"
+	"defaultTile": "nexpaq.tile.speaker"
 }
