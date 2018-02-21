@@ -116,7 +116,8 @@
                     "name": "bluetoothName",
                     "title": "Bluetooth Name",
                     "descirpiton": "Speaker module bluetooth name",
-                    "convert": "StringUtf8"
+                    "convert": "StringUtf8",
+                    "data": []
                 }
             ]
         },
