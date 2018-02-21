@@ -1,10 +1,10 @@
 {
   "id": "nexpaq.tile.speaker-testing",
   "name": "Speaker",
-  "description": "Nexpaq Speaker module interface for testing",
+  "description": "Speaker module interface for testing",
 
-  "version": "1.0.1",
-  "changes": "This is version that supports new nexpaq API",
+  "version": "1.0.2",
+  "changes": "Moduware speaker controls UI",
   "app_version": "1.0.3",
   "modules": [
     "nexpaq.module.speaker",
