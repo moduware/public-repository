@@ -1,10 +1,10 @@
 {
   "id": "nexpaq.tile.speaker",
   "name": "Speaker",
-  "description": "Nexpaq Speaker module interface",
+  "description": "Speaker module interface",
 
-  "version": "1.0.2",
-  "changes": "Decreased size of package",
+  "version": "1.0.3",
+  "changes": "Moduware speaker support, default state control",
   "app_version": "1.0.3",
   "modules": [
     "nexpaq.module.speaker",
