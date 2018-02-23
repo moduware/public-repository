@@ -3,6 +3,9 @@
 	"name": "Speaker",
 	"description": "Moduware Speaker module",
 	
+	"firmwareVersion": "1.2.0",
+	"changes": "The first version for moduware BT speaker module",
+	
 	"size": 3,
 	"orientation": "up",
 	"defaultTile": "nexpaq.tile.speaker"
