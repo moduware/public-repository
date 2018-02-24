@@ -4,6 +4,8 @@
 	"description": "This is nexpaq Mini Developer's Board",
 
 	"firmwareVersion": "1.0.4",
-
-	"firmware_version": "1.0.4"
+	"changes": "  ",
+	
+	"bootloaderVersion": "1.0.3",
+	"bootloaderChanges": "BLE is un-discoverable for Last Android OS;  Communication fail when sending a large data packge"
 }
