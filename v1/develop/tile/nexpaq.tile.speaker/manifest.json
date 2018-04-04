@@ -3,9 +3,9 @@
   "name": "Speaker",
   "description": "Speaker module interface",
 
-  "version": "1.0.3",
-  "changes": "Moduware speaker support, default state control",
-  "app_version": "1.0.3",
+  "version": "1.0.4",
+  "changes": "More descriptive UI for Moduware speaker users",
+  "app_version": "1.1.5",
   "modules": [
     "nexpaq.module.speaker",
     "moduware.module.speaker"
