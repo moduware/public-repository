@@ -2,7 +2,6 @@
 
 const fs = require('fs-extra');
 const download = require('download');
-const unzip = require('unzip');
 
 const RepositoryUrl = 'http://repository.nexpaq.com/v1';
 const ResourcesFolderPath = './resources';
@@ -16,17 +15,17 @@ const DriverLessModules = [
     'nexpaq.module.devmod'
 ];
 
-let CurrentBranch = 'stable';
+let CurrentBranch = 'develop';
 
 
 function showHelp() {
     console.log(`
         --help for this help
-        <branch> to specify branch, stable by default
+        <branch> to specify branch, develop by default
     `);
 }
 
-function main() {
+async function main() {
     if(typeof(process.argv[2]) != 'undefined' && process.argv[2] == '--help') {
         showHelp();
         return;
@@ -37,235 +36,135 @@ function main() {
     console.log(`Ave Developer, loading resources for ${CurrentBranch} branch\n`);
 
     // Clean "resources" folder
-    CleanResourcesFolder();
+    await CleanResourcesFolder();
     
     // Read "resources.json" in memory
-    var config = LoadConfiguration();
+    const config = await LoadConfiguration();
     if(config == null) {
         console.error('Cannot load configuration');
         return;
     }
 
     // Download all drivers
-    DownloadDrivers(config.modules)
-    .then(() => {
-        console.log(`Drivers downloaded\n`);
-        // Download all manifests
-        var manifests_list = config.modules.concat(config.tiles, config.gateways);
-        return DownloadManifests(manifests_list);
-    })
-    .then(() => {
-        console.log(`Manifests downloaded\n`);
+    await DownloadDrivers(config.modules);
+    console.log(`Drivers downloaded\n`);
 
-        // Download all tiles
-        return DownloadTiles(config.tiles);
-    })
-    .then(() => {
-        console.log(`Tiles downloaded\n`);
+    // Download all manifests
+    const manifestsList = config.modules.concat(config.tiles, config.gateways);
+    await DownloadManifests(manifestsList);
+    console.log(`Manifests downloaded\n`);
 
-        return DownloadProductsList(config.products_url);
-    })
-    .then(() => {
-        console.log('All resources downloaded\n');
-    });
+    // Download all tiles
+    await DownloadTiles(config.tiles);
 
     // Download products list
+    await DownloadProductsList(config.products_url);
+    console.log('All resources downloaded\n');
 }
 
 /**
  * Clean resources folder and recreate structure
  */
-function CleanResourcesFolder() {
-    fs.removeSync(ResourcesFolderPath);
-    fs.mkdirSync(ResourcesFolderPath);
-    fs.mkdirSync(DriversFolderPath);
-    fs.mkdirSync(ManifestsFolderPath);
-    fs.mkdirSync(TilesFolderPath);
+async function CleanResourcesFolder() {
+    await fs.remove(ResourcesFolderPath);
+    await fs.mkdir(ResourcesFolderPath);
+    await fs.mkdir(DriversFolderPath);
+    await fs.mkdir(ManifestsFolderPath);
+    await fs.mkdir(TilesFolderPath);
 }
 
 /**
  * Load script configuration file
  */
-function LoadConfiguration() {
+async function LoadConfiguration() {
     try {
-        var config_txt = fs.readFileSync(ConfigurationPath);
-        var config = JSON.parse(config_txt);
+        var configTxt = await fs.readFile(ConfigurationPath);
+        var config = JSON.parse(configTxt);
         return config;
     } catch(e) {
         return null;
     }
 }
 
-function DownloadProductsList(url) {
+async function DownloadProductsList(url) {
     console.log('Downloading products list');
 
-    return new Promise((resolve, reject) => {
-        try {
-            download(`${url}`).then(data => {            
-                fs.writeFileSync(`${ResourcesFolderPath}/products.txt`, data);
-                var lines_count = data.toString().split("\n").length;
-                console.log(`Loaded ${lines_count} products`);
-                resolve();
-            });
-        } catch(e) {
-            console.error(e);
-            reject();
-        }
-    });
+    const data = await download(`${url}`);
+                
+    await fs.writeFile(`${ResourcesFolderPath}/products.txt`, data);
+    var lines_count = data.toString().split("\n").length;
+    console.log(`Loaded ${lines_count} products`);
 }
 
 /**
  * Downloads all drivers from list
- * @param  {} drivers_list
+ * @param  {} driversList
  */
-function DownloadDrivers(drivers_list) {
-    console.log(`Downloading ${drivers_list.length} drivers`);
+async function DownloadDrivers(driversList) {
+    console.log(`Downloading ${driversList.length} drivers`);
 
-    return new Promise((tresolve, treject) => {
-        promiseLoop(
-            (i) => !(i < drivers_list.length),
-            (i) => i+1,
-            (i, resolve, action) => {
-                var driver = drivers_list[i];
-
-                if(DriverLessModules.indexOf(driver) != -1) {
-                    console.log(`${driver} - Ok`);
-                    resolve();
-                    return;
-                }
-
-                DownloadDriver(driver).then(function() {
-                    console.log(`${driver} - Ok`);
-                    resolve();
-                }).catch(function() {
-                    console.log(`${driver} - Fail`);
-                    resolve();
-                });
-            },
-            () => tresolve()
-        );
-    });
+    for(let driver of driversList) {
+        if(DriverLessModules.indexOf(driver) != -1) {
+            console.log(`${driver} - Driverless`);
+        } else {
+            await DownloadDriver(driver);
+            console.log(`${driver} - Ok`);
+        }
+    }
 }
 
 /**
  * Downloads particular driver, returns promise
  * @param  {} driver
  */
-function DownloadDriver(driver) {
-    return new Promise((resolve, reject) => {
-        try {
-            download(`${RepositoryUrl}/${CurrentBranch}/module/${driver}/driver.json`).then(data => {
-                fs.writeFileSync(`${DriversFolderPath}/${driver}.json`, data);
-                resolve();
-            });
-        } catch(e) {
-            console.error(e);
-            reject();
-        }
-    });
+async function DownloadDriver(driver) {
+    const data = await download(`${RepositoryUrl}/${CurrentBranch}/module/${driver}/driver.json`);
+    await fs.writeFile(`${DriversFolderPath}/${driver}.json`, data);
 }
 
 /**
  * Downloads all manifests in list
- * @param  {} items_list List of items which manifests to download
+ * @param  {} manifestsList List of items which manifests to download
  */
-function DownloadManifests(items_list) {
-    console.log(`Downloading ${items_list.length} manifests`);
+async function DownloadManifests(manifestsList) {
+    console.log(`Downloading ${manifestsList.length} manifests`);
 
-    return new Promise((tresolve, treject) => {
-        promiseLoop(
-            (i) => !(i < items_list.length),
-            (i) => i+1,
-            (i, resolve, action) => {
-                var item = items_list[i];
-
-                DownloadManifest(item).then(function() {
-                    console.log(`${item} - Ok`);
-                    resolve();
-                }).catch(function() {
-                    console.log(`${item} - Fail`);
-                    resolve();
-                });
-            },
-            () => tresolve()
-        );
-    });
+    for(let manifest of manifestsList) {
+        await DownloadManifest(manifest);
+        console.log(`${manifest} - Ok`);
+    }
 }
 
 /**
  * Downloads one specific manifest
- * @param  {} item_id id of item which manifest we need to download
+ * @param  {} manifest id of item which manifest we need to download
  */
-function DownloadManifest(item_id) {
-    var [creator, type, name] = item_id.split('.');
-    return new Promise((resolve, reject) => {
-        try {
-            download(`${RepositoryUrl}/${CurrentBranch}/${type}/${item_id}/manifest.json`).then(data => {
-                fs.writeFileSync(`${ManifestsFolderPath}/${item_id}.json`, data);
-                resolve();
-            });
-        } catch(e) {
-            console.error(e);
-            reject();
-        }
-    });
+async function DownloadManifest(manifest) {
+    const [creator, type, name] = manifest.split('.');
+
+    let data = await download(`${RepositoryUrl}/${CurrentBranch}/${type}/${manifest}/manifest.json`);
+    await fs.writeFile(`${ManifestsFolderPath}/${manifest}.json`, data);
 }
 
 /**
  * Download and extract all tiles in list
- * @param  {} items_list
+ * @param  {} tilesList
  */
-function DownloadTiles(items_list) {
-    console.log(`Downloading ${items_list.length} tiles`);
+async function DownloadTiles(tilesList) {
+    console.log(`Downloading ${tilesList.length} tiles`);
 
-    return new Promise((tresolve, treject) => {
-        promiseLoop(
-            (i) => !(i < items_list.length),
-            (i) => i+1,
-            (i, resolve, action) => {
-                var item = items_list[i];
-
-                DownloadTile(item).then(function() {
-                    console.log(`${item} - Ok`);
-                    resolve();
-                }).catch(function() {
-                    console.log(`${item} - Fail`);
-                    resolve();
-                });
-            },
-            () => tresolve()
-        );
-    });
+    for(let tile of tilesList) {
+        await DownloadTile(tile);
+        console.log(`${tile} - Ok`);
+    }
 }
 
 /**
  * Download and extract specific tile
- * @param  {} item_id
+ * @param  {} tileId
  */
-function DownloadTile(item_id) {
-    return new Promise((resolve, reject) => {
-        try {
-            download(`${RepositoryUrl}/${CurrentBranch}/tile/${item_id}/tile.zip`).pipe(unzip.Extract({ path: `${TilesFolderPath}/${item_id}` }))
-            .on('finish', resolve);
-        } catch(e) {
-            console.error(e);
-            reject();
-        }
-    });
-}
-
-/**
- * @param  {} check checks if loop is finished
- * @param  {} change modifies iterator
- * @param  {} action actions to perform in each loop
- * @param  {} end actions after all loop interations finished
- */
-function promiseLoop(check, change, action, end) {
-    (function loop(i) {
-        const promise = new Promise((resolve, reject) => {
-            action(i, resolve, reject);
-        }).then( () => check(i+1) ? end() : loop(change(i)) );
-    })(0);
+async function DownloadTile(tileId) {
+    await download(`${RepositoryUrl}/${CurrentBranch}/tile/${tileId}/tile.zip`, `${TilesFolderPath}/${tileId}`, { extract: true });
 }
 
 main();

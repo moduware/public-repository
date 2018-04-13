@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "download": "^6.2.5",
-    "fs-extra": "^3.0.1",
-    "unzip": "^0.1.11"
+    "fs-extra": "^3.0.1"
   }
 }
