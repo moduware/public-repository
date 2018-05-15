@@ -7,6 +7,7 @@
 	"changes": "Optimized module detection",
 
 	"bootloaderVersion": "1.2.0",
+	"bootloaderChanges": "Fixed: 1.Device is not discoverable for Phone runs Android 8 or later with BLE5.0;  2. Enable Watchdog in project setting; Changes: 1. Reset device after BLE upgraded.",
 	"minimumBootloaderVersion": "1.1.5",
 
 	"ble_version": "1.2.0",
