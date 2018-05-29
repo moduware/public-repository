@@ -3,8 +3,8 @@
   "name": "LED",
   "description": "LED module interface",
 
-  "version": "1.2.2",
-  "changes": "Flash leds now can be fully turned off",
+  "version": "1.2.3",
+  "changes": "Temperature control for RGB LEDs",
   "minumumAppVersion": "1.5.0",
   "modules": [
     "nexpaq.module.led",
