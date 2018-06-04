@@ -3,9 +3,9 @@
 	"name": "Mini Dev Board",
 	"description": "This is nexpaq Mini Developer's Board",
 
-	"firmwareVersion": "1.0.4",
-	"changes": "",
+	"firmwareVersion": "1.1.0",
+	"changes": "Fixed: MiniDevKit is not normal power on moduware's module",
 	
-	"bluetoothFirmwareVersion": "1.0.3",
-	"bluetoothFirmwareChanges": "BLE is un-discoverable for Last Android OS; Communication fail when sending a large data package;"
+	"bluetoothFirmwareVersion": "1.1.0",
+	"bluetoothFirmwareChanges": " Fixed: Device is not discoverable for Phone runs Android 8 or later with BLE5.0 "
 }
