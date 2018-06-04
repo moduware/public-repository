@@ -3,8 +3,8 @@
 	"name": "LED",
 	"description": "Moduware module with 6 multicolor LED and 2 flash elements",
 	
-	"firmwareVersion": "1.3.9",
-	"changes": "1. Added temperature protection ",
+	"firmwareVersion": "1.3.10",
+	"changes": "Separate temp control for rgb and flash",
 
     "size": 1,
 	"orientation": "up",
