@@ -6,6 +6,6 @@
 	"firmwareVersion": "1.1.0",
 	"changes": "Fixed: Device is not normal power on some module of MODUWARE .",
 	
-	"bootloaderVersion": "1.2.2",
-	"bootloaderChanges": "Fixed: Device is not discoverable for Phone runs Android 8 or later with BLE5.0"
+	"bluetoothFirmwareVersion": "1.2.2",
+	"bluetoothFirmwareChanges": "Fixed: Device is not discoverable for Phone runs Android 8 or later with BLE5.0"
 }
