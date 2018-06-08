@@ -3,9 +3,9 @@
 	"name": "Samsung S6 Phonepaq",
 	"description": "The phonepaq is the world’s first truly modular case that allows your smartphone to do more. How much more is up to you.",
 
-	"firmwareVersion": "1.0.0",
-	"changes": "Optimize the power management; Optimize SPI communication.",
+	"firmwareVersion": "1.1.0",
+	"changes": "Fixed: Device is not normal power on some module of MODUWARE .",
 	
-	"bootloaderVersion": "1.1.2",
-	"bootloaderChanges": "Added Pairing feature,pairing password: 000000; Added permit feature "
+	"bluetoothFirmwareVersion": "1.2.2",
+	"bluetoothFirmwareChanges": "Fixed: Device is not discoverable for Phone runs Android 8 or later with BLE5.0"
 }
