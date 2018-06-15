@@ -3,8 +3,8 @@
   "name": "Temperature and Humidity",
   "description": "Moduware T&H tile module interface",
 
-  "version": "1.2.1",
-  "changes": "Fixing status bar offset",
+  "version": "1.3.1",
+  "changes": "Minor UI changes and bug fixes",
   "app_version": "1.1.5",
   "modules": [
     "nexpaq.module.hat"
