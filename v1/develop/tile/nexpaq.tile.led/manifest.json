@@ -3,9 +3,9 @@
   "name": "LED",
   "description": "LED module interface",
 
-  "version": "1.2.4",
-  "changes": "Temperature control for RGB LEDs",
-  "minumumAppVersion": "1.5.0",
+  "version": "1.2.5",
+  "changes": "Fix LED support for ios 10 and below",
+  "minumumAppVersion": "1.1.8",
   "modules": [
     "nexpaq.module.led",
     "moduware.module.led"
