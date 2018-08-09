@@ -1,7 +1,7 @@
 {
 	"id": "moduware.module.hat",
 	"name": "T&H",
-	"description": "moduware Temperature & Humidity module allows you to see temperature and humidity.",
+	"description": "Moduware Temperature & Humidity module allows you to see temperature and humidity.",
 
 	"firmwareVersion": "1.0.2",
 
