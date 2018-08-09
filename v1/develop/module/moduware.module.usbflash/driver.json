@@ -1,0 +1,72 @@
+{
+    "type": "moduware.module.usbflash",
+    "version": "1.0.2",
+    "commands": [
+        {
+            "name": "StatusCheck",
+            "title": "Checks the status of USB flash module",
+            "description": "To work with USB flash module and read data, USB flash module must be plugged in.",
+            "command": "2702"
+        },
+        {
+            "name": "Connect",
+            "title": "Connects to the USB flash",
+            "description": "Connects to the USB flash that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 1
+                }
+            ]
+        },
+        {
+            "name": "Disconnect",
+            "title": "Disconnects from the USB flash",
+            "description": "Disconnects from USB flash that is plugged in.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 0
+                }
+            ]
+        }
+    ],
+    "data": [
+        {
+            "name": "StateChangeResponse",
+            "title": "State Change Reponse",
+            "description": "Response to state change command",
+            "source": "2701",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of connect or disconnect request",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "StatusRequestResponse",
+            "title": "Status Request Reponse",
+            "description": "Response to status request",
+            "source": "2703",
+            "variables": [
+                {
+                    "name": "status",
+                    "title": "Status",
+                    "description": "Indicates if module mounted as USB device",
+                    "data": [0],
+                    "state": {
+                        "00": "disconnected",
+                        "01": "connected"
+                    }
+                }
+            ]
+        }
+    ]
+}

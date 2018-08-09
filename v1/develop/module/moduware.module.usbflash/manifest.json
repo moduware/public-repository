@@ -1,0 +1,13 @@
+{
+	"id": "moduware.module.usbflash",
+	"name": "USB Flash",
+	"description": "moduware USB flash driver module",
+
+	"firmwareVersion": "1.0.2",
+
+  "size": 1,
+	"orientation": "up",
+	"defaultTile": "moduware.tile.usbflash",
+
+	"firmware_version": "1.0.2"
+}
