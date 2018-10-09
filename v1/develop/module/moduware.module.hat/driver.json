@@ -1,0 +1,118 @@
+{
+    "type": "moduware.module.hat",
+    "version": "1.1.1",
+    "commands": [
+        {
+            "name": "StartSensor",
+            "title": "Start T&H sensor",
+            "description": "To work with T&H module and read data, sensor must be started first",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 3
+                }
+            ]
+        },
+        {
+            "name": "StopSensor",
+            "title": "Stop T&H sensor",
+            "description": "Stop reading data from T&H module.",
+            "command": "2700",
+            "data": [
+                {
+                    "defaultValue": 4
+                }
+            ]
+        },
+        {
+            "name": "ChangeEmissivity",
+            "title": "Change Emmissivity",
+            "description": "Change emissivity of sensor",
+            "command": "2702",
+            "arguments": [
+                {
+                    "name": "Emissivity"
+                }
+            ],
+            "data": [
+                {
+                    "defaultValue": 1
+                },
+                {
+                    "defaultValue": 0
+                }
+            ]
+        }
+    ],
+    "data": [
+        {
+            "name": "SensorStateChangeResponse",
+            "title": "Sensor State Change Reponse",
+            "description": "Response to sensor state change command",
+            "source": "2701",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of turn sensor on or off request",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "failure"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "EmissivityChangeResponse",
+            "title": "Emissivity Change Request Response",
+            "description": "Response to change emissivity setting of sensor",
+            "source": "2703",
+            "variables": [
+                {
+                    "name": "result",
+                    "title": "Result",
+                    "description": "Result of attempt to set new emissivity value",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "bad_value",
+                        "02": "eeprom_fault"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "SensorValue",
+            "title": "Sensor Value",
+            "description": "Value from Temperature and Humidity sensor",
+            "source": "2800",
+            "variables": [
+                {
+                    "name": "humidity",
+                    "title": "Humidity",
+                    "description": "Ambient humidity detected by module",
+                    "data": [0, 1],
+                    "format": "({0} * 256 + {1}) * 125 / 65536 - 6",
+                    "source": "data"
+                },
+                {
+                    "name": "ambient_temperature",
+                    "title": "Ambient Temperature",
+                    "description": "Ambient temperature detected by module",
+                    "data": [4, 5],
+                    "format": "({0} * 256 + {1}) * 0.02 - 273.15",
+                    "source": "data"
+                },
+                {
+                    "name": "object_temperature",
+                    "title": "Object Temperature",
+                    "description": "Object temperature detected by module",
+                    "data": [2, 3],
+                    "format": "({0} * 256 + {1}) * 0.02 - 273.15",
+                    "source": "data"
+                }
+            ]
+        }
+    ]
+}

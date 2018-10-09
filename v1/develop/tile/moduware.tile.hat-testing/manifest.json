@@ -1,0 +1,18 @@
+{
+  "id": "moduware.tile.hat-testing",
+  "name": "Temperature & Humidity",
+  "description": "Moduware H&T module interface for testing",
+
+  "version": "0.0.2",
+  "minimumAppVersion": "1.0.0",
+  "modules": [
+    "moduware.module.hat"
+  ],
+  
+  "title": "Temperature",
+  "color": "black",
+  "textColor": "white",
+
+  "app_version": "1.0.0",
+  "text_color": "white"
+}

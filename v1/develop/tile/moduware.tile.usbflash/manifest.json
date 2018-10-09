@@ -1,0 +1,16 @@
+{
+  "id": "moduware.tile.usbflash",
+  "name": "USB Flash",
+  "description": "Moduware USB flash tile",
+
+  "version": "1.0.3",
+  "changes": "Minor UI enhancement",
+  "minumumAppVersion": "1.1.8",
+  "modules": [
+    "moduware.module.usbflash"
+  ],
+  
+  "title": "USB",
+  "color": "#4BC3DA",
+  "textColor": "white"
+}
