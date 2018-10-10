@@ -1,5 +1,12 @@
 {
 	"id": "moduware.gateway.modpack",
 	"name": "Modpack",
-	"description": "Modpack is a standalone device with modular capability with 6 slots, and it also can provide your devices additional power when required."
+	"description": "Modpack is a standalone device with modular capability with 6 slots, and it also can provide your devices additional power when required.",
+	
+	"firmwareVersion": "2.4.1",
+	"changes": "1. Optimized charging function ; 2. Added flow lamp function of LED5~8 when phone was charged.",
+  	"minimumBootloaderVersion": "2.2.4",
+  
+	"bluetoothFirmwareVersion": "1.2.2",
+	"bluetoothFirmwareChanges": " First firmware version of bluetooth."
 }
