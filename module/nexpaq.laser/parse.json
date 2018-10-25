@@ -1,8 +1,0 @@
-[{
-	"fun": "state",
-	"data": [0],
-	"state": {
-		"00": "cover closed",
-		"01": "cover open"
-	}
-}]
