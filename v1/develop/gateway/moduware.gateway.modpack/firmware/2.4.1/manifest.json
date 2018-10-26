@@ -5,6 +5,6 @@
   "type": "msp430txt",
 
   "version": "2.4.1",
-  "changes": ""1. Optimized charging function ; 2. Added flow lamp function of LED5~8 when phone was charged.",
+  "changes": "1. Optimized charging function ; 2. Added flow lamp function of LED5~8 when phone was charged.",
   "minimumBootloaderVersion": "2.2.4"
 }
