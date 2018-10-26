@@ -2,7 +2,7 @@
 Application public repository
 
 This repository can be found here:
-http://repository.nexpaq.com/
+https://repository.moduware.com/
 
 Developers can add their tiles, updates, firmware or modules by
 pull requests.
