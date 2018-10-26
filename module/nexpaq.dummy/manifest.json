@@ -1,9 +1,0 @@
-{
-	"id": "nexpaq.dummy",
-	"name": "Dummy",
-	"description": "Dummy module.",
-  "size": 1,
-	"firmware_version": "0.0.0",
-	"icon": "icon.svg",
-	"creator": "nexpaq"
-}
