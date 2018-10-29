@@ -5,8 +5,9 @@
 	
 	"firmwareVersion": "1.4.0",
 	"changes": "Optimized RGB LED color display.",
+  "stableFirmwareVersion": "1.4.0",
 
-    "size": 1,
+  "size": 1,
 	"orientation": "up",
 	"defaultTile": "nexpaq.tile.led"
 }
