@@ -3,11 +3,14 @@
 	"name": "USB Flash",
 	"description": "Moduware USB flash driver module",
 
-	"firmwareVersion": "1.0.2",
+  "firmwareVersions": {
+    "stable": "1.0.2"
+  },
 
   "size": 1,
 	"orientation": "up",
 	"defaultTile": "moduware.tile.usbflash",
 
+	"firmwareVersion": "1.0.2",
 	"firmware_version": "1.0.2"
 }

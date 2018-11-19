@@ -1,5 +1,5 @@
 {
-  "id": "nexpaq.module.hat",
+  "id": "moduware.module.hat",
   "name": "Moduware T&H module firmware",
   "description": "MSP430 firmware for a Moduware T&H module MCU",
   "type": "msp430txt",
