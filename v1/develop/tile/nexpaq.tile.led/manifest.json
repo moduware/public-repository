@@ -4,5 +4,15 @@
   "description": "LED module interface",
   "versions": {
     "stable": "1.2.5"
-  }
+  },
+  "changes": "Fix LED support for ios 10 and below",
+  "minumumAppVersion": "1.1.8",
+  "modules": [
+    "nexpaq.module.led",
+    "moduware.module.led"
+  ],
+  
+  "title": "LED",
+  "color": "#40CF9A",
+  "textColor": "white"
 }
