@@ -4,9 +4,6 @@
   "description": "Nexpaq LED tile module interface for testing",
 
   "version": "1.0.0",
-  "versions": {
-    "stable": "1.0.0"
-  },
   "changes": "This is version that supports new nexpaq API",
   "minimumAppVersion": "1.0.0",
   "modules": [
