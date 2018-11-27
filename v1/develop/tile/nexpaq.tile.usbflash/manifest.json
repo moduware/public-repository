@@ -4,9 +4,6 @@
   "description": "Nexpaq USB flash tile",
 
   "version": "1.0.3",
-  "versions": {
-    "stable": "1.0.3"
-  },
   "changes": "Minor UI enhancement",
   "minumumAppVersion": "1.1.8",
   "modules": [
