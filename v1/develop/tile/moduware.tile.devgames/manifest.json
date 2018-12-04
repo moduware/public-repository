@@ -1,0 +1,16 @@
+{
+  "id": "moduware.tile.devgames",
+  "name": "DevGames",
+  "description": "Moduware STEM tile for electronics education.",
+
+  "version": "0.9.0",
+  "changes": "MVP version",
+  "minumumAppVersion": "1.1.10",
+  "modules": [
+    "nexpaq.module.devmod"
+  ],
+  
+  "title": "DevGames",
+  "color": "#D12F3E",
+  "textColor": "white"
+}
