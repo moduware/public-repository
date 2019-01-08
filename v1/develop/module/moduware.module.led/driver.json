@@ -357,6 +357,28 @@
             "description": "Request status of the LED module",
             "command": "2714",
             "data": []
+        },
+        {
+            "name": "PrioritizeColorBrightness",
+            "title": "Prioritize Color Brightness",
+            "description": "Asks module firmware to show color in brightest way, resulting color can be less accurate",
+            "command": "2718",
+            "data": [
+              {
+                "defaultValue": 0
+              }
+            ]
+        },
+        {
+            "name": "PrioritizeColorAccuracy",
+            "title": "Prioritize Color Accuracy",
+            "description": "Asks module firmware to show color in most accurate way, resulting color can be less bright",
+            "command": "2718",
+            "data": [
+              {
+                "defaultValue": 1
+              }
+            ]
         }
     ]
 }
