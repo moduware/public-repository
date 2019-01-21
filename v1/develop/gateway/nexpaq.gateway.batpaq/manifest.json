@@ -3,10 +3,16 @@
 	"name": "Batpaq",
 	"description": "The batpaq is a standalone device that works the same as the phonepaq but with any mobile device. It is the first modular power bank that can charge your phone twice.",
 	
-	"firmwareVersion": "1.1.0",
-	"changes": "Optimized module detection",
+  "firmwareVersions": {
+    "stable": "1.1.0"
+  },
+  "bluetoothFirmwareVersions": {
+    "stable": "1.2.0"
+  },
 
+	"firmwareVersion": "1.1.0",
 	"bluetoothFirmwareVersion": "1.2.0",
 	"bluetoothFirmwareChanges": "Fixed: 1.Device is not discoverable for Phone runs Android 8 or later with BLE5.0;  2. Enable Watchdog in project setting; Changes: 1. Reset device after BLE upgraded.",
-	"minimumBootloaderVersion": "1.1.5"
+	"minimumBootloaderVersion": "1.1.5",
+	"changes": "Optimized module detection"
 }
