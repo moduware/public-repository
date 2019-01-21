@@ -1,0 +1,9 @@
+{
+  "id": "nexpaq.gateway.default",
+  "name": "Gateway firmware",
+  "description": "MSP430 firmware for a Gateway MCU",
+  "type": "msp430txt",
+
+  "version": "0.5.4",
+  "changes": "General firmware release"
+}
