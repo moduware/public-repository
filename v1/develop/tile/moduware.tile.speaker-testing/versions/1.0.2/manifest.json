@@ -3,13 +3,8 @@
   "name": "Speaker",
   "description": "Speaker module interface for testing",
 
-  "versions": {
-    "stable": "1.0.2"
-  },
-
   "version": "1.0.2",
   "changes": "Moduware speaker controls UI",
-  "app_version": "1.0.3",
   "modules": [
     "nexpaq.module.speaker",
     "moduware.module.speaker"
@@ -17,5 +12,5 @@
   
   "title": "Speaker",
   "color": "black",
-  "text_color": "white"
+  "textColor": "white"
 }
