@@ -1,7 +1,7 @@
 {
   "id": "nexpaq.gateway.batpaq",
   "name": "Batpaq BLE firmware",
-  "description": "Fixed: 1.Device is not discoverable for Phone runs Android 8 or later with BLE5.0;  2. Enable Watchdog in project setting; Changes: 1. Reset device after BLE upgraded.",
+  "description": "Bluetooth firmware for batpaq gateway",
 
   "version": "1.1.0",
   "changes": "Optimized module detection",
