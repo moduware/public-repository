@@ -1,0 +1,10 @@
+{
+  "id": "nexpaq.gateway.batpaq",
+  "name": "Batpaq firmware",
+  "description": "MSP430 firmware for a Batpaq MCU",
+  "type": "msp430txt",
+
+  "version": "1.1.0",
+  "changes": "Optimized module detection",
+  "minimumBootloaderVersion": "1.1.5"
+}
