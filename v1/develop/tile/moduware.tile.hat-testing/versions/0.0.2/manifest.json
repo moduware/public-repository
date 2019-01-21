@@ -3,10 +3,6 @@
   "name": "Temperature & Humidity",
   "description": "Moduware H&T module interface for testing",
 
-  "versions": {
-    "stable": "0.0.2"
-  },
-
   "version": "0.0.2",
   "minimumAppVersion": "1.0.0",
   "modules": [
