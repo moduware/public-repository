@@ -3,10 +3,6 @@
 	"name": "Dummy",
 	"description": "Adds appearance to dummy module at dashboard",
 
-  "versions": {
-    "stable": "1.0.0"
-  },
-
 	"version": "1.0.0",
 	"minimumAppVersion": "1.0.5",
 	"modules": [
@@ -15,8 +11,5 @@
 
 	"title": "Dummy",
 	"color": "#6E80C6",
-	"textColor": "white",
-
-	"app_version": "1.0.5",
-  "text_color": "white"
+	"textColor": "white"
 }
