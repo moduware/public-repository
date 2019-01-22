@@ -3,10 +3,6 @@
   "name": "Battery",
   "description": "Nexpaq Battery module interface for testing",
 
-  "versions": {
-    "stable": "1.0.0"
-  },
-
   "version": "1.0.0",
   "changes": "This is version that supports new nexpaq API",
   "minimumAppVersion": "1.0.3",
@@ -16,8 +12,5 @@
   
   "title": "Battery",
   "color": "black",
-  "textColor": "white",
-
-  "app_version": "1.0.3",
-  "text_color": "white"
+  "textColor": "white"
 }
