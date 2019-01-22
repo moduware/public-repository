@@ -3,10 +3,6 @@
   "name": "Memory",
   "description": "Nexpaq Memory tile module interface",
 
-  "versions": {
-    "stable": "1.0.1"
-  },
-
   "version": "1.0.1",
   "changes": "Small package",
   "minimumAppVersion": "1.0.3",
@@ -16,8 +12,5 @@
   
   "title": "Backup",
   "color": "#5899DE",
-  "textColor": "white",
-
-  "app_version": "1.0.3",
-  "text_color": "white"
+  "textColor": "white"
 }
