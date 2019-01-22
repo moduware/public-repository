@@ -3,10 +3,6 @@
   "name": "AirQ",
   "description": "Nexpaq tile for AirQ module",
 
-  "versions": {
-    "stable": "1.0.1"
-  },
-
   "version": "1.0.1",
   "changes": "Smaller package size",
   "minimumAppVersion": "1.0.3",
@@ -16,8 +12,5 @@
   
   "title": "Air Quality",
   "color": "#21A5E0",
-  "textColor": "white",
-
-  "app_version": "1.0.3",
-  "text_color": "white"
+  "textColor": "white"
 }
