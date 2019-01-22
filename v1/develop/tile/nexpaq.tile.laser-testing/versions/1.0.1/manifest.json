@@ -3,10 +3,6 @@
   "name": "Laser Pointer",
   "description": "Nexpaq Laser module interface for testing",
 
-  "versions": {
-    "stable": "1.0.1"
-  },
-
   "version": "1.0.1",
   "changes": "Table with laser and cover states, now works with improved driver API",
   "minimumAppVersion": "1.0.3",
@@ -17,8 +13,5 @@
   
   "title": "Laser",
   "color": "black",
-  "textColor": "white",
-
-  "app_version": "1.0.3",
-  "text_color": "white"
+  "textColor": "white"
 }
