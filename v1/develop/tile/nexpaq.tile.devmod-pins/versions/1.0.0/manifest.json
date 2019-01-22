@@ -3,10 +3,6 @@
   "name": "DevMod Pins",
   "description": "Tile to control pins on MSP or MAX developer's module, loads custom module driver. Requires correct firmware.",
 
-  "versions": {
-    "stable": "1.0.0"
-  },
-
   "version": "1.0.0",
   "changes": "Initial release",
   "minumumAppVersion": "1.0.5",
