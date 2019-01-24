@@ -3,14 +3,8 @@
   "name": "LED",
   "description": "LED module interface",
 
-  "versions": {
-    "stable": "1.2.5",
-    "beta": "1.2.6",
-    "alpha": "1.2.7"
-  },
-
-  "version": "1.2.6",
-  "changes": "ColorPriority for better colors: brighter and more accurate",
+  "version": "1.2.7",
+  "changes": "Fake version to check updates system",
   "minumumAppVersion": "1.1.8",
   "modules": [
     "nexpaq.module.led",
