@@ -1,9 +1,0 @@
-{
-  "id": "moduware.module.led",
-  "name": "Moduware LED module firmware",
-  "description": "MSP430 firmware for a Moduware LED module MCU",
-  "type": "msp430txt",
-
-  "version": "1.4.1",
-  "changes": "Fake 1.4.1 for update system test (1.4.0)"
-}

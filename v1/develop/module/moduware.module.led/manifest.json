@@ -4,9 +4,7 @@
 	"description": "Moduware module with 6 multicolor LED and 2 flash elements",
 	
   "firmwareVersions": {
-    "stable": "1.3.9",
-    "beta": "1.4.0",
-    "alpha": "1.4.1"
+    "stable": "1.4.0"
   },
 
   "size": 1,
