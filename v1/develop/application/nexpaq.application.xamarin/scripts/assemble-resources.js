@@ -37,7 +37,7 @@ async function main() {
 
     // Clean "resources" folder
     await CleanResourcesFolder();
-    
+
     // Read "resources.json" in memory
     const config = await LoadConfiguration();
     if(config == null) {
@@ -50,7 +50,7 @@ async function main() {
     console.log(`Drivers downloaded\n`);
 
     // Download all manifests
-    const manifestsList = config.modules.concat(config.tiles, config.gateways);
+    const manifestsList = config.modules.concat(config.gateways);
     await DownloadManifests(manifestsList);
     console.log(`Manifests downloaded\n`);
 
@@ -90,7 +90,7 @@ async function DownloadProductsList(url) {
     console.log('Downloading products list');
 
     const data = await download(`${url}`);
-                
+
     await fs.writeFile(`${ResourcesFolderPath}/products.txt`, data);
     var lines_count = data.toString().split("\n").length;
     console.log(`Loaded ${lines_count} products`);
