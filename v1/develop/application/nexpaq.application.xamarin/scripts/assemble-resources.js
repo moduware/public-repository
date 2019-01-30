@@ -164,7 +164,11 @@ async function DownloadTiles(tilesList) {
  * @param  {} tileId
  */
 async function DownloadTile(tileId) {
-    await download(`${RepositoryUrl}/${CurrentBranch}/tile/${tileId}/tile.zip`, `${TilesFolderPath}/${tileId}`, { extract: true });
+    // get stable version number
+    const json = await download(`${RepositoryUrl}/${CurrentBranch}/tile/${tileId}/manifest.json`);
+    const manifest = JSON.parse(json);
+    // download stable version
+    await download(`${RepositoryUrl}/${CurrentBranch}/tile/${tileId}/versions/${manifest.versions.stable}/tile.zip`, `${TilesFolderPath}/${tileId}`, { extract: true });
 }
 
 main();
