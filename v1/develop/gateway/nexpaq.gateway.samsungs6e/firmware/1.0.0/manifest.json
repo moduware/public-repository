@@ -1,0 +1,9 @@
+{
+  "id": "nexpaq.gateway.samsung6e",
+  "name": "Samsung6e case firmware",
+  "description": "MSP430 firmware for a Samsung6e case MCU",
+  "type": "msp430txt",
+
+  "version": "1.0.0",
+  "changes": "Optimize the power management; Optimize SPI communication."
+}

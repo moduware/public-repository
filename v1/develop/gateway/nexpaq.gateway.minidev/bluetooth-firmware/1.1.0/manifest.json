@@ -1,0 +1,8 @@
+{
+  "id": "nexpaq.gateway.minidev",
+  "name": "MiniDev board BLE firmware",
+  "description": "Bluetooth firmware for MiniDev board gateway",
+
+  "version": "1.1.0",
+  "changes": "Fixed: Device is not discoverable for Phone runs Android 8 or later with BLE5.0"
+}

@@ -3,6 +3,14 @@
 	"name": "Mini Dev Board",
 	"description": "This is MODUWARE Mini Developer's Board",
 
+  "firmwareVersions": {
+    "stable": "1.1.0"
+  },
+  "bluetoothFirmwareVersions": {
+    "stable": "1.1.0"
+  },
+
+
 	"firmwareVersion": "1.1.0",
 	"changes": "Fixed: Device is not normal power on some module of MODUWARE ",
 	

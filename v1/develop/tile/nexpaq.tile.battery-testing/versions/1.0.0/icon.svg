@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Battery Icon 58x58</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main-App-Advanced+Simple-mode" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-100x100-Tile" transform="translate(-290.000000, -58.000000)">
+            <g id="Battery-Icon-58x58" transform="translate(290.000000, 58.000000)">
+                <g>
+                    <path d="M34.5315904,10.4858388 C34.5315904,9.06535948 33.4662309,8 32.0457516,8 L25.120915,8 C23.7004357,8 22.6350763,9.06535948 22.6350763,10.4858388 L22.6350763,12.6165577 C22.6350763,14.037037 21.5697168,15.1023965 20.1492375,15.1023965 L17.4858388,15.1023965 C16.0653595,15.1023965 15,16.167756 15,17.5882353 L15,47.66122 C15,49.0816993 16.0653595,50.1470588 17.4858388,50.1470588 L39.6808279,50.1470588 C41.1013072,50.1470588 42.1666667,49.0816993 42.1666667,47.66122 L42.1666667,17.5882353 C42.1666667,16.167756 41.1013072,15.1023965 39.6808279,15.1023965 L37.0174292,15.1023965 C35.7745098,15.1023965 34.5315904,14.037037 34.5315904,12.6165577 L34.5315904,10.4858388 Z" id="Shape" fill="#FFFFFF"></path>
+                    <rect id="Rectangle-2" x="0" y="0" width="58" height="58"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

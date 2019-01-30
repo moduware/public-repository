@@ -1,0 +1,15 @@
+{
+	"id": "nexpaq.tile.dummy",
+	"name": "Dummy",
+	"description": "Adds appearance to dummy module at dashboard",
+
+	"version": "1.0.0",
+	"minimumAppVersion": "1.0.5",
+	"modules": [
+		"nexpaq.module.dummy"
+	],
+
+	"title": "Dummy",
+	"color": "#6E80C6",
+	"textColor": "white"
+}

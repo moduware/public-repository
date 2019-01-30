@@ -3,6 +3,10 @@
   "name": "Speaker",
   "description": "Speaker module interface for testing",
 
+  "versions": {
+    "stable": "1.0.2"
+  },
+
   "version": "1.0.2",
   "changes": "Moduware speaker controls UI",
   "app_version": "1.0.3",

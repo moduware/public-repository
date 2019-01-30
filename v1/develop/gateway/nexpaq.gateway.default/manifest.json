@@ -3,6 +3,7 @@
 	"name": "Gateway",
 
 	"firmwareVersion": "0.5.4",
-
-	"firmware_version": "0.5.4"
+  "firmwareVersions": {
+    "stable": "0.5.4"
+  }
 }

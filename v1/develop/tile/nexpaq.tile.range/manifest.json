@@ -1,10 +1,14 @@
 {
   "id": "nexpaq.tile.range",
   "name": "Laser Distance",
-  "description": "Nexpaq Laser Distance module interface",
+  "description": "Moduware Laser Distance module interface",
 
-  "version": "1.1.6",
-  "changes": "Fix iPhone X top notch UI bug",
+  "versions": {
+    "stable": "1.1.7"
+  },
+
+  "version": "1.1.7",
+  "changes": "Correct units for volume and area",
   "minimumAppVersion": "1.1.8",
   "modules": [
     "nexpaq.module.range"

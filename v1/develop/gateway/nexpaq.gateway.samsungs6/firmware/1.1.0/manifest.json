@@ -1,0 +1,9 @@
+{
+  "id": "nexpaq.gateway.samsung6",
+  "name": "Samsung6 case firmware",
+  "description": "MSP430 firmware for a Samsung6 case MCU",
+  "type": "msp430txt",
+
+  "version": "1.1.0",
+  "changes": "Fixed: Device is not normal power on some module of MODUWARE"
+}

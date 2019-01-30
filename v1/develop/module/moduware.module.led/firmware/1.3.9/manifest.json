@@ -1,0 +1,9 @@
+{
+  "id": "moduware.module.led",
+  "name": "Moduware LED module firmware",
+  "description": "MSP430 firmware for a Moduware LED module MCU",
+  "type": "msp430txt",
+
+  "version": "1.3.9",
+  "changes": "Temperature safety feature"
+}

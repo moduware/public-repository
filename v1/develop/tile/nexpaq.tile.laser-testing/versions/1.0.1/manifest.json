@@ -1,0 +1,17 @@
+{
+  "id": "nexpaq.tile.laser-testing",
+  "name": "Laser Pointer",
+  "description": "Nexpaq Laser module interface for testing",
+
+  "version": "1.0.1",
+  "changes": "Table with laser and cover states, now works with improved driver API",
+  "minimumAppVersion": "1.0.3",
+  "modules": [
+    "nexpaq.module.laser",
+    "nexpaq.module.range"
+  ],
+  
+  "title": "Laser",
+  "color": "black",
+  "textColor": "white"
+}

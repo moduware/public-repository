@@ -3,6 +3,10 @@
 	"name": "AirQ",
 	"description": "nexpaq Air Quality module",
   
+  "firmwareVersions": {
+    "stable": "1.0.0"
+  },
+
 	"firmwareVersion": "1.0.0",
 
 	"size": 1,

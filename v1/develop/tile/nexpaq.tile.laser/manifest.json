@@ -3,6 +3,10 @@
   "name": "Laser Pointer",
   "description": "Nexpaq Laser Pointer tile module interface",
 
+  "versions": {
+    "stable": "1.0.3"
+  },
+
   "version": "1.0.3",
   "changes": "Fix iPhone X top notch UI bug",
   "minimumAppVersion": "1.1.8",

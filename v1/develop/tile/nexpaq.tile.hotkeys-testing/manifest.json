@@ -3,6 +3,10 @@
   "name": "HotKeys",
   "description": "Nexpaq Hotkeys module interface for testing",
 
+  "versions": {
+    "stable": "1.0.1"
+  },
+
   "version": "1.0.1",
   "changes": "Smaller package size",
   "minimumAppVersion": "1.0.3",
