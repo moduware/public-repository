@@ -1,0 +1,10 @@
+{
+	"id": "moduware.module.barometer",
+	"name": "Barometer",
+	"description": "Moduware module to measure atmospheric pressure",
+	
+  "firmwareVersions": {},
+
+  "size": 1,
+	"orientation": "up"
+}
