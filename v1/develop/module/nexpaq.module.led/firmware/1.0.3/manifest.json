@@ -1,0 +1,9 @@
+{
+  "id": "nexpaq.module.led",
+  "name": "Moduware LED module firmware",
+  "description": "MSP430 firmware for a Moduware LED module MCU",
+  "type": "msp430txt",
+
+  "version": "1.0.3",
+  "changes": "Updated to MDK 1.0.7, bug fix when LED flash elements couldn't be completely turned off"
+}

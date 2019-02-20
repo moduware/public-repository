@@ -3,6 +3,10 @@
 	"name": "HotKeys",
 	"description": "nexpaq Hotkeys module provides two additional physical buttons to your device",
 
+  "firmwareVersions": {
+    "stable": "1.0.2"
+  },
+
 	"firmwareVersion": "1.0.2",
 
   "size": 1,

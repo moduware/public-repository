@@ -1,0 +1,9 @@
+{
+  "id": "nexpaq.module.usbflash",
+  "name": "Moduware usbflash module firmware",
+  "description": "MSP430 firmware for a Moduware usbflash module MCU",
+  "type": "msp430txt",
+
+  "version": "1.0.2",
+  "changes": "Base release"
+}

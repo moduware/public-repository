@@ -1,0 +1,8 @@
+{
+  "id": "nexpaq.gateway.samsung6",
+  "name": "Samsung6 case BLE firmware",
+  "description": "Bluetooth firmware for Samsung6 case gateway",
+
+  "version": "1.2.2",
+  "changes": "Fixed: Device is not discoverable for Phone runs Android 8 or later with BLE5.0"
+}

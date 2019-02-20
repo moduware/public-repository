@@ -1,0 +1,9 @@
+{
+  "id": "nexpaq.gateway.iphone6",
+  "name": "iPhone6 gateway firmware",
+  "description": "MSP430 firmware for a iPhone6 gateway MCU",
+  "type": "msp430txt",
+
+  "version": "0.5.4",
+  "changes": "General firmware release"
+}

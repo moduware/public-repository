@@ -4,6 +4,9 @@
   "description": "Moduware T&H tile module interface",
 
   "version": "1.3.4",
+  "versions": {
+    "stable": "1.3.4"
+  },
   "changes": "Bug fixes for IOS 10 and below",
   "minumumAppVersion": "1.1.8",
   "modules": [

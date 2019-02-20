@@ -1,0 +1,9 @@
+{
+  "id": "nexpaq.module.range",
+  "name": "Moduware Laser Distance module firmware",
+  "description": "MSP430 firmware for a Moduware Laser Distance module MCU",
+  "type": "msp430txt",
+
+  "version": "0.0.3",
+  "changes": "Base release"
+}

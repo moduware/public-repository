@@ -3,6 +3,10 @@
 	"name": "Contaminants",
 	"description": "nexpaq Air Contaminants sensor module",
 
+  "firmwareVersions": {
+    "stable": "1.0.0"
+  },
+
 	"firmwareVersion": "1.0.0",
 
   "size": 1,

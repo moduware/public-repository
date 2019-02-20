@@ -3,10 +3,15 @@
 	"name": "LED",
 	"description": "Moduware module with 6 multicolor LED and 2 flash elements",
 	
-	"firmwareVersion": "1.3.12",
-	"changes": "Optimized temperature protection.",
+  "firmwareVersions": {
+    "stable": "1.4.0"
+  },
 
-    "size": 1,
+  "size": 1,
 	"orientation": "up",
-	"defaultTile": "nexpaq.tile.led"
+	"defaultTile": "nexpaq.tile.led",
+
+	"firmwareVersion": "1.4.0",
+	"changes": "Optimized RGB LED color display.",
+  "stableFirmwareVersion": "1.4.0"
 }

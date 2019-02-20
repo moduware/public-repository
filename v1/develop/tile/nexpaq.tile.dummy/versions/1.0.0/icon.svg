@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="38px" viewBox="0 0 22 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Dummy Icon 58x58 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main-App-Advanced+Simple-mode" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tiles-100x100" transform="translate(-457.000000, -519.000000)">
+            <g id="Dummy-Icon-58x58" transform="translate(439.000000, 509.000000)">
+                <g>
+                    <rect id="Rectangle" x="0" y="0" width="58" height="58"></rect>
+                    <path d="M37.978904,10 C39.7624202,10 40.5042785,11.489645 39.6381939,13.3223416 L24.8204898,44.6776584 C23.9533741,46.512537 21.8009832,48 20.021096,48 C18.2375798,48 17.4957215,46.510355 18.3618061,44.6776584 L33.1795102,13.3223416 C34.0466259,11.487463 36.1990168,10 37.978904,10 Z" id="Rectangle-782" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

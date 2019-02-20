@@ -3,6 +3,10 @@
   "name": "USB Flash",
   "description": "Moduware USB flash tile interface for testing",
 
+  "versions": {
+    "stable": "1.0.0"
+  },
+
   "version": "1.0.0",
   "changes": "This is version that supports new moduware API",
   "minimumAppVersion": "1.0.3",
