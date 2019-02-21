@@ -1,0 +1,55 @@
+{
+  "type": "moduware.module.barometer",
+  "version": "0.0.1",
+  "commands": [
+    {
+      "name": "StartSensor",
+      "title": "Start Sensor",
+      "description": "Starts barometer sensor and reads data from it in a loop",
+      "command": "2700",
+      "data": [{
+        "defaultValue": 3
+      }]
+    },
+    {
+      "name": "StopSensor",
+      "title": "Stop Sensor",
+      "description": "Stops barometer sensor",
+      "command": "2700",
+      "data": [{
+        "defaultValue": 4
+      }]
+    }
+  ],
+  "data": [
+    {
+      "name": "SensorValue",
+      "title": "Sensor Value",
+      "description": "Value from a barometer sensor",
+      "source": "2800",
+      "variables": [
+        {
+          "name": "humidity",
+          "title": "Humidity",
+          "description": "Humidity detected by the module",
+          "data": [0, 1, 2, 3],
+          "format": "({0}<<24 + {1}<<16 + {2}<<8 + {3}) / 1000"
+        },
+        {
+          "name": "temperature",
+          "title": "Temperature",
+          "description": "Temperature detected by the module",
+          "data": [4, 5, 6, 7],
+          "format": "({0}<<24 + {1}<<16 + {2}<<8 + {3}) / 100"
+        },
+        {
+          "name": "pressure",
+          "title": "Pressure",
+          "description": "Pressure detected by the module",
+          "data": [8, 9, 10, 11],
+          "format": "({0}<<24 + {1}<<16 + {2}<<8 + {3}) / 100"
+        }
+      ]
+    }
+  ]
+}
