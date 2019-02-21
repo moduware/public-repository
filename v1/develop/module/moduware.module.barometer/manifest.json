@@ -3,8 +3,14 @@
 	"name": "Barometer",
 	"description": "Moduware module to measure atmospheric pressure",
 	
-  "firmwareVersions": {},
+  "firmwareVersions": {
+    "stable": "0.0.1"
+  },
 
   "size": 1,
-	"orientation": "up"
+  "orientation": "up",
+	
+  "firmwareVersion": "0.0.1",
+  "changes": "the first beta firmware released.",
+  "betaFirmwareVersion": "0.0.1"
 }
