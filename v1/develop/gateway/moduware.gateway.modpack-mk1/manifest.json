@@ -3,18 +3,21 @@
 	"name": "Modpack",
 	"description": "Modpack is a standalone device with modular capability with 6 slots, and it also can provide your devices additional power when required.",
 
-  "firmwareVersions": {
+  "firmwareVersions": 
+  {
+    "stable": "3.0.3"
   },
-  "bluetoothFirmwareVersions": {
-    "stable": "1.2.2"
+  "bluetoothFirmwareVersions": 
+  {
+    "stable": "1.3.1"
   },
 
 
   "__FOR_PRE_1.1.14_APPS_SUPPORT__": 0,
-  "firmwareVersion": "0.0.0",
-	"changes": "1. Optimized charging function ; 2. Added flow lamp function of LED5~8 when phone was charged.",
-  "minimumBootloaderVersion": "2.2.4",
+  "firmwareVersion": "3.0.3",
+  "changes": "First version for new hardware of ModPack",
+  "minimumBootloaderVersion": "3.0.0",
   
-	"bluetoothFirmwareVersion": "1.2.2",
-	"bluetoothFirmwareChanges": " First firmware version of bluetooth."
+  "bluetoothFirmwareVersion": "1.3.1",
+  "bluetoothFirmwareChanges": "1.BLE stack 1.4.2 , 2.Received pack Max LEN. 90, 3.Update firmware via USB part "
 }

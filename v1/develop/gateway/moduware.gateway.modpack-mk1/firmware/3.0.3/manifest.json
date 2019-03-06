@@ -1,0 +1,10 @@
+{
+  "id": "moduware.gateway.modpack",
+  "name": "Modpack firmware",
+  "description": "Stable MSP430 firmware for a Modpack MCU",
+  "type": "msp430txt",
+
+  "version": "3.0.3",
+  "changes": "First version for new hardware of ModPack",
+  "minimumBootloaderVersion": "3.0.0"
+}
