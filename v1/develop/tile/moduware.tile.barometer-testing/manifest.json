@@ -3,13 +3,7 @@
   "name": "Barometer",
   "description": "Moduware Barometer module interface for testing",
 
-  "version": "0.0.1",
-  "minimumAppVersion": "1.1.0",
-  "modules": [
-    "moduware.module.barometer"
-  ],
-  
-  "title": "Barometer",
-  "color": "black",
-  "textColor": "white"
+  "versions": {
+    "stable": "0.0.1"
+  }
 }
