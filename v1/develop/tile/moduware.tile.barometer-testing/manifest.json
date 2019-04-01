@@ -4,6 +4,6 @@
   "description": "Moduware Barometer module interface for testing",
 
   "versions": {
-    "stable": "0.0.1"
+    "stable": "0.0.2"
   }
 }
