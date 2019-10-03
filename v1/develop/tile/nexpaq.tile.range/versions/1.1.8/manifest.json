@@ -1,11 +1,7 @@
 {
   "id": "nexpaq.tile.range",
   "name": "Laser Distance",
-  "description": "Moduware Laser Distance module interface",
-
-  "versions": {
-    "stable": "1.1.8"
-  },
+  "description": "Nexpaq Laser Distance module interface",
 
   "version": "1.1.8",
   "changes": "Minor bug fixes to laser distance",
