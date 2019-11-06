@@ -3,12 +3,8 @@
   "name": "Speaker",
   "description": "Speaker module interface",
 
-  "version": "1.0.5",
-  "versions": {
-    "stable": "1.0.5",
-    "alpha": "1.0.6"
-  },
-  "changes": "Fixed status bar offset",
+  "version": "1.0.6",
+  "changes": "Add localisation English and Chinese",
   "app_version": "1.1.5",
   "modules": [
     "nexpaq.module.speaker",
