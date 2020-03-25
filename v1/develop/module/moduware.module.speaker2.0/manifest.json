@@ -1,0 +1,12 @@
+{
+	"id": "moduware.module.speaker2.0",
+	"name": "Speaker",
+	"description": "Moduware Speaker module",
+	
+  "firmwareVersions": {
+  },
+	
+	"size": 3,
+	"orientation": "up",
+	"defaultTile": "nexpaq.tile.speaker"
+}
