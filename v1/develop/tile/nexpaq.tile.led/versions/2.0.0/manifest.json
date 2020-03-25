@@ -2,9 +2,8 @@
   "id": "nexpaq.tile.led",
   "name": "LED",
   "description": "LED module interface",
-
   "version": "2.0.0",
-  "changes": "Bug fixes (develop-pwa)",
+	"changes": "Complete rewrite",
   "minumumAppVersion": "1.1.8",
   "modules": [
     "nexpaq.module.led",
