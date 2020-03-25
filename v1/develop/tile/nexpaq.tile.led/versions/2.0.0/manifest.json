@@ -3,13 +3,8 @@
   "name": "LED",
   "description": "LED module interface",
 
-  "versions": {
-    "stable": "1.2.6",
-    "alpha": "2.0.0"
-  },
-
-  "version": "1.2.6",
-  "changes": "bug fixes (develop-pwa)",
+  "version": "2.0.0",
+  "changes": "Bug fixes (develop-pwa)",
   "minumumAppVersion": "1.1.8",
   "modules": [
     "nexpaq.module.led",
