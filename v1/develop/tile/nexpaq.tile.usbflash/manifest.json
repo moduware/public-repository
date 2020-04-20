@@ -2,11 +2,9 @@
 	"id": "nexpaq.tile.usbflash",
 	"name": "USB Flash",
 	"description": "Nexpaq USB flash tile",
-	"version": "1.0.3",
+	"version": "2.0.0",
 	"versions": {
-		"stable": "1.0.3",
-		"alpha": "2.0.0",
-		"beta": "1.1.0"
+		"stable": "2.0.0"
 	},
 	"changes": "Complete rewrite",
 	"minumumAppVersion": "1.1.8",
