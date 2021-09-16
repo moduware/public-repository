@@ -1,0 +1,23 @@
+{
+	"id": "moduware.gateway.modpack-v2",
+	"name": "Modpack",
+	"description": "Modpack is a standalone device with modular capability with slots, and it also can provide your devices additional power when required.",
+
+  "firmwareVersions": 
+  {
+    "stable": "0.2.1"
+  },
+  "bluetoothFirmwareVersions": 
+  {
+    "stable": "0.0.1"
+  },
+
+
+  "__FOR_PRE_1.1.14_APPS_SUPPORT__": 0,
+  "firmwareVersion": "0.2.1",
+  "changes": "First version for new hardware of ModPack",
+  "minimumBootloaderVersion": "0.2.1",
+  
+  "bluetoothFirmwareVersion": "0.0.1",
+  "bluetoothFirmwareChanges": "1.BLE stack 5.0"
+}

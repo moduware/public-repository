@@ -1,0 +1,16 @@
+{
+	"id": "moduware.module.speaker-v2",
+	"name": "Speaker",
+	"description": "Moduware Speaker module",
+	
+  "firmwareVersions": {
+    "stable": "0.3.0"
+  },
+	
+	"size": 3,
+	"orientation": "up",
+	"defaultTile": "nexpaq.tile.speaker",
+  
+  "firmwareVersion": "0.3.0",
+	"changes": "The first version for moduware BT speaker module"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "moduware.gateway.modpack-v2",
+  "name": "Modpack-v2 firmware",
+  "description": "Stable firmware for a Modpack MCU",
+  "type": "hex",
+
+  "version": "0.2.1",
+  "changes": "First version for new hardware of ModPack",
+  "minimumBootloaderVersion": "0.2.1"
+}

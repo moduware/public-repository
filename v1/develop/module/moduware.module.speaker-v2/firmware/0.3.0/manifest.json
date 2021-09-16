@@ -1,0 +1,9 @@
+{
+  "id": "moduware.module.speaker-v2",
+  "name": "Moduware Speaker module firmware",
+  "description": "Firmware for a Moduware Speaker module MCU",
+  "type": "hex",
+
+  "version": "0.3.0",
+  "changes": "First version for speaker module."
+}
