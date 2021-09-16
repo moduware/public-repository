@@ -8,5 +8,6 @@
   },
 
   "size": 1,
-  "orientation": "up"
+  "orientation": "up",
+  "defaultTile": "moduware.tile.barometer-testing"
 }

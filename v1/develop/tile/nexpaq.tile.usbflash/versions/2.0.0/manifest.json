@@ -3,15 +3,12 @@
 	"name": "USB Flash",
 	"description": "Nexpaq USB flash tile",
 	"version": "2.0.0",
-	"versions": {
-		"stable": "2.0.0"
-	},
 	"changes": "Complete rewrite",
-	"minumumAppVersion": "1.1.8",
+	"app_version": "1.1.8",
 	"modules": [
 		"nexpaq.module.usbflash"
 	],
 	"title": "USB",
 	"color": "#4BC3DA",
-	"textColor": "white"
+	"text_color": "white"
 }

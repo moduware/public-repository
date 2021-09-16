@@ -1,21 +1,18 @@
 {
-  "id": "nexpaq.tile.led",
-  "name": "LED",
-  "description": "LED module interface",
-
-  "versions": {
-    "stable": "1.2.6"
-  },
-
-  "version": "1.2.6",
-  "changes": "ColorPriority for better colors: brighter and more accurate",
-  "minumumAppVersion": "1.1.8",
-  "modules": [
-    "nexpaq.module.led",
-    "moduware.module.led"
-  ],
-  
-  "title": "LED",
-  "color": "#40CF9A",
-  "textColor": "white"
+	"id": "nexpaq.tile.led",
+	"name": "LED",
+	"description": "LED module interface",
+	"versions": {
+		"stable": "2.0.0"
+	},
+	"version": "2.0.0",
+	"changes": "Complete rewrite",
+	"minumumAppVersion": "1.1.8",
+	"modules": [
+		"nexpaq.module.led",
+		"moduware.module.led"
+	],
+	"title": "LED",
+	"color": "#40CF9A",
+	"textColor": "white"
 }

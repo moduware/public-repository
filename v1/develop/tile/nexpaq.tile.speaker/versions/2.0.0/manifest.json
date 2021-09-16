@@ -3,16 +3,13 @@
 	"name": "Speaker",
 	"description": "Speaker module interface",
 	"version": "2.0.0",
-	"versions": {
-		"stable": "2.0.0"
-	},
 	"changes": "Complete rewrite",
-	"app_version": "1.1.5",
+	"minumumAppVersion": "1.1.8",
 	"modules": [
 		"nexpaq.module.speaker",
 		"moduware.module.speaker"
 	],
 	"title": "Speaker",
 	"color": "#DF5250",
-	"text_color": "white"
+	"textColor": "white"
 }

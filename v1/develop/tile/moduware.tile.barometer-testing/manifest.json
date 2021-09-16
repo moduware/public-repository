@@ -1,0 +1,9 @@
+{
+  "id": "moduware.tile.barometer-testing",
+  "name": "Barometer",
+  "description": "Moduware Barometer module interface for testing",
+
+  "versions": {
+    "stable": "0.0.2"
+  }
+}
