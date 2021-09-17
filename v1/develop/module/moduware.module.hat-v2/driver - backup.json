@@ -1,10 +1,9 @@
 {
-    "type": "moduware.module.hat-v2",
+    "type": "moduware.module.hat",
     "version": "1.1.1",
     "commands": [
         {
             "name": "StartSensor",
-            "flag":"normal",
             "title": "Start T&H sensor",
             "description": "To work with T&H module and read data, sensor must be started first",
             "command": "2700",
@@ -16,7 +15,6 @@
         },
         {
             "name": "StopSensor",
-            "flag":"normal",
             "title": "Stop T&H sensor",
             "description": "Stop reading data from T&H module.",
             "command": "2700",
@@ -28,7 +26,6 @@
         },
         {
             "name": "ChangeEmissivity",
-            "flag":"normal",
             "title": "Change Emmissivity",
             "description": "Change emissivity of sensor",
             "command": "2702",
