@@ -1,44 +1,9 @@
 {
-    "type": "moduware.module.speaker-v2",
+    "type": "moduware.module.speaker",
     "version": "1.0.0",
     "commands": [
         {
-            "name":"RemoteControl",
-            "flag":"gaia",
-            "title": "",
-            "description": "",
-            "command": "021F"
-        },
-        {
-            "name":"SetPreset",
-            "flag":"gaia",
-            "title": "",
-            "description": "",
-            "command": "0214"
-        },
-        {
-            "name":"SetBassBoost",
-            "flag":"gaia",
-            "title": "",
-            "description": "",
-            "command": "0215"
-        },
-        {
-            "name":"Set3D",
-            "flag":"gaia",
-            "title": "",
-            "description": "",
-            "command": "0216"
-        },
-        {
-            "name":"Init",
-            "title": "",
-            "description": "",
-            "flag":"gaia"
-        },
-        {
             "name": "Connect",
-            "flag":"normal",
             "title": "Turn on speaker",
             "description": "Turns on speaker module.",
             "command": "2700",
@@ -50,7 +15,6 @@
         },
         {
             "name": "Disconnect",
-            "flag":"normal",
             "title": "Turn off speaker",
             "description": "Turn off speaker module",
             "command": "2700",
@@ -62,21 +26,18 @@
         },
         {
             "name": "StatusCheck",
-            "flag":"normal",
             "title": "Status Check",
             "description": "Checks the status of Speaker module, to work with Speaker module, speaker module must be turned on.",
             "command": "2702"
         },
         {
             "name": "AskBluetoothName",
-            "flag":"normal",
             "title": "Ask Bluetooh Name",
             "description": "Ask for module bluetooth name",
             "command": "2704"
         },
         {
             "name": "SetDefaultStateAsOn",
-            "flag":"normal",
             "title": "Set Default State As On",
             "description": "Set module to turn on when powered",
             "command": "2706",
@@ -88,7 +49,6 @@
         },
         {
             "name": "SetDefaultStateAsOff",
-            "flag":"normal",
             "title": "Set Default State As Off",
             "description": "Set module to stay off when powered",
             "command": "2706",
@@ -100,13 +60,6 @@
         }
     ],
     "data": [
-        {
-            "name": "GaiaReceived",
-            "title": "",
-            "description": "",
-            "command": "",
-            "payload": 0
-        },
         {
             "name": "StateChangeResponse",
             "title": "State Change Response",
