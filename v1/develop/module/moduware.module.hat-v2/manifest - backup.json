@@ -9,7 +9,7 @@
 
   "size": 1,
 	"orientation": "up",
-	"defaultTile": "nexpaq.tile.hat",
+	"defaultTile": "moduware.tile.hat",
 
 	"firmwareVersion": "0.3.0",
 	"firmware_version": "0.3.0"
