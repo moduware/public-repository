@@ -1,5 +1,5 @@
 {
-    "type": "moduware.module.hat",
+    "type": "moduware.module.hat-v2",
     "version": "1.1.1",
     "commands": [
         {
