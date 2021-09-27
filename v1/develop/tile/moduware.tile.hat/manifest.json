@@ -11,7 +11,9 @@
   "changes": "Bug fixes for IOS 10 and below",
   "minumumAppVersion": "1.1.8",
   "modules": [
-    "moduware.module.hat"
+    "nexpaq.module.hat",
+    "moduware.module.hat",
+    "moduware.module.hat-v2"
   ],
 
   "title": "Temperature",
