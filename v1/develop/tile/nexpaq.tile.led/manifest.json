@@ -10,7 +10,8 @@
 	"minumumAppVersion": "1.1.8",
 	"modules": [
 		"nexpaq.module.led",
-		"moduware.module.led"
+		"moduware.module.led",
+		"moduware.module.led-v2"
 	],
 	"title": "LED",
 	"color": "#40CF9A",
