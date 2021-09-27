@@ -10,7 +10,8 @@
   "changes": "Complete rewrite",
   "minumumAppVersion": "1.1.8",
   "modules": [
-    "nexpaq.module.hat"
+    "nexpaq.module.hat",
+    "moduware.module.hat-v2"
   ],
 
   "title": "Temperature",
