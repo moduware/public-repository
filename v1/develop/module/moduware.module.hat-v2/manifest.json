@@ -1,7 +1,7 @@
 {
 	"id": "moduware.module.hat-v2",
 	"name": "T&H",
-	"description": "nexpaq Temperature & Humidity module allows you to see temperature and humidity.",
+	"description": "Moduware Temperature & Humidity module allows you to see temperature and humidity.",
 	"firmwareVersions": {
 		"stable": "1.0.2"
 	},
