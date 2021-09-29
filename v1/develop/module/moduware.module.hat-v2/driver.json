@@ -184,38 +184,6 @@
                     }
                 }
             ]
-        },
-        {
-            "name": "SensorValue",
-            "title": "Sensor Value",
-            "description": "Value from Temperature and Humidity sensor",
-            "source": "2800",
-            "variables": [
-                {
-                    "name": "humidity",
-                    "title": "Humidity",
-                    "description": "Ambient humidity detected by module",
-                    "data": [0, 1],
-                    "format": "({0} * 256 + {1}) * 125 / 65536 - 6",
-                    "source": "data"
-                },
-                {
-                    "name": "ambient_temperature",
-                    "title": "Ambient Temperature",
-                    "description": "Ambient temperature detected by module",
-                    "data": [4, 5],
-                    "format": "({0} * 256 + {1}) * 0.02 - 273.15",
-                    "source": "data"
-                },
-                {
-                    "name": "object_temperature",
-                    "title": "Object Temperature",
-                    "description": "Object temperature detected by module",
-                    "data": [2, 3],
-                    "format": "({0} * 256 + {1}) * 0.02 - 273.15",
-                    "source": "data"
-                }
-            ]
         }
     ]
 }
