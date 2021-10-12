@@ -17,6 +17,13 @@
             "command": "0214"
         },
         {
+            "name":"OpenPreset",
+            "flag":"gaia",
+            "title": "",
+            "description": "",
+            "command": "0220"
+        },
+        {
             "name":"SetBassBoost",
             "flag":"gaia",
             "title": "",
