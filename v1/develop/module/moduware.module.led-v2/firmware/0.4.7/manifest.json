@@ -1,0 +1,9 @@
+{
+  "id": "moduware.module.led-v2",
+  "name": "Moduware LED module firmware",
+  "description": "Firmware for a Moduware LED module MCU",
+  "type": "hex",
+
+  "version": "0.3.3",
+  "changes": "First version for led module."
+}
