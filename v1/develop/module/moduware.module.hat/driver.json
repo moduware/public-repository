@@ -4,6 +4,7 @@
     "commands": [
         {
             "name": "StartSensor",
+            "flag":"normal",
             "title": "Start T&H sensor",
             "description": "To work with T&H module and read data, sensor must be started first",
             "command": "2700",
@@ -15,6 +16,7 @@
         },
         {
             "name": "StopSensor",
+            "flag":"normal",
             "title": "Stop T&H sensor",
             "description": "Stop reading data from T&H module.",
             "command": "2700",
@@ -26,6 +28,7 @@
         },
         {
             "name": "ChangeEmissivity",
+            "flag":"normal",
             "title": "Change Emmissivity",
             "description": "Change emissivity of sensor",
             "command": "2702",
@@ -45,6 +48,106 @@
         }
     ],
     "data": [
+        {
+            "name":"RefreshData",
+            "title": "Refresh temperature and humidity data",
+            "description": "Refresh temperature and humidity data",
+            "source": "2704",
+            "variables": [
+                {
+                    "name": "ObjectTemperatureStatus",
+                    "title": "",
+                    "description": "status of sensor (object temperature). Hera name Sensor1",
+                    "data": [1],
+                    "state": {
+                        "00": "data valid",
+                        "01": "data invalid. Sensor has not been read",
+                        "02": "data invalid. Hardware error"
+                    }
+                },
+                {
+                    "name": "HumidityStatus",
+                    "title": "",
+                    "description": "status of sensor (humidity). Hera name Sensor2",
+                    "data": [2],
+                    "state": {
+                        "00": "data valid",
+                        "01": "data invalid. Sensor has not been read",
+                        "02": "data invalid. Hardware error"
+                    }
+                },
+                {
+                    "name": "DistanceStatus",
+                    "title": "",
+                    "description": "status of sensor (distance). Hera name Sensor3",
+                    "data": [3],
+                    "state": {
+                        "00": "data valid",
+                        "01": "data invalid. Sensor has not been read",
+                        "02": "data invalid. Hardware error"
+                    }
+                },
+                {
+                    "name": "Sensor1ObjectTemperature",
+                    "title": "",
+                    "description": "Sensor1's Object temperature. Unit 0.01 Celsius degree",
+                    "data": [4, 5],
+                    "format": "({0} * 256 + {1}) / 100",
+                    "source": "data"
+                },
+                {
+                    "name": "Sensor1AmbientTemperature",
+                    "title": "",
+                    "description": "Sensor1's ambient temperature. Unit 0.01 Celsius degree",
+                    "data": [6, 7],
+                    "format": "({0} * 256 + {1}) / 100",
+                    "source": "data"
+                },
+                {
+                    "name": "Sensor1BodyTemperature",
+                    "title": "",
+                    "description": "Sensor1's body temperature. Unit 0.01 Celsius degree. If Tbody == 0xffff, means that the value is invalid",
+                    "data": [8, 9],
+                    "format": "({0} * 256 + {1}) / 100",
+                    "source": "data"
+                },
+                {
+                    "name": "Sensor2AmbientTemperature",
+                    "title": "",
+                    "description": "Sensor2's ambient temperature. Unit 0.01 Celsius degree",
+                    "data": [10, 11],
+                    "format": "({0} * 256 + {1}) / 100",
+                    "source": "data"
+                },
+                {
+                    "name": "Sensor2Humidity",
+                    "title": "",
+                    "description": "Sensor2's humidity. Unit 0.01 %RH",
+                    "data": [12, 13],
+                    "format": "({0} * 256 + {1}) / 100",
+                    "source": "data"
+                },
+                {
+                    "name": "Sensor3DistanceStatus",
+                    "title": "",
+                    "description": "distance status of Sensor3",
+                    "data": [14],
+                    "state": {
+                        "00": "Distance is right",
+                        "01": "Distance is too far",
+                        "02": "Distance is too close"
+                    }
+                },
+                {
+                    "name": "Sensor3DistanceValue",
+                    "title": "",
+                    "description": "Sensor3's distance value",
+                    "data": [15, 16],
+                    "format": "{0} * 256 + {1}",
+                    "source": "data"
+                }
+            ]
+        },
         {
             "name": "SensorStateChangeResponse",
             "title": "Sensor State Change Reponse",
