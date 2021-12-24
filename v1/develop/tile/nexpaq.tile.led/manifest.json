@@ -1,17 +1,13 @@
 {
 	"id": "nexpaq.tile.led",
-	"name": "LED",
-	"description": "LED module interface",
-	"versions": {
-		"stable": "2.0.0"
-	},
+	"name": "LED play",
+	"description": "LED V2",
 	"version": "2.0.0",
 	"changes": "Complete rewrite",
 	"minumumAppVersion": "1.1.8",
 	"modules": [
 		"nexpaq.module.led",
-		"moduware.module.led",
-		"moduware.module.led-v2"
+		"moduware.module.led"
 	],
 	"title": "LED",
 	"color": "#40CF9A",
