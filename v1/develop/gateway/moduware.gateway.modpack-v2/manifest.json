@@ -5,19 +5,19 @@
 
   "firmwareVersions": 
   {
-    "stable": "0.2.1"
+    "stable": "1.3.2"
   },
   "bluetoothFirmwareVersions": 
   {
-    "stable": "0.0.1"
+    "stable": "1.0.20"
   },
 
 
   "__FOR_PRE_1.1.14_APPS_SUPPORT__": 0,
   "firmwareVersion": "0.2.1",
   "changes": "First version for new hardware of ModPack",
-  "minimumBootloaderVersion": "0.2.1",
+  "minimumBootloaderVersion": "1.0.2",
   
-  "bluetoothFirmwareVersion": "0.0.1",
+  "bluetoothFirmwareVersion": "1.0.20",
   "bluetoothFirmwareChanges": "1.BLE stack 5.0"
 }
