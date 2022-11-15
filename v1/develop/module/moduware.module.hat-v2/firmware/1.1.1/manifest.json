@@ -1,0 +1,9 @@
+{
+  "id": "moduware.module.hat-v2",
+  "name": "Moduware T&H module firmware",
+  "description": "Firmware for a Moduware T&H module MCU",
+  "type": "hex",
+
+  "version": "1.1.1",
+  "changes": "First release version for T&H module-v2. "
+}
