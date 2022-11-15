@@ -9,20 +9,6 @@
             "description": "",
             "command": "2722"
         },
-        {
-			"name": "GetApplets",
-			"flag": "normal",
-			"title": "",
-			"description": "",
-			"command": "2720"
-		},
-		{
-			"name": "ControlApplet",
-			"flag": "normal",
-			"title": "",
-			"description": "",
-			"command": "2720"
-		},
 		{
 			"name": "StreamRGB",
 			"flag":"streaming",
@@ -288,19 +274,39 @@
 			"name": "AppletInfo",
 			"title": "get LED applets information",
 			"description": "request success or fail, if without any applet the resule will return number of rgb led and number of flash led",
-			"source": "2721"
-		},
-		{
-			"name": "AppletControlResult",
-			"title": "control applet result",
-			"description": "open or close led funcation success or fail",
-			"source": "2721"
-		},
-		{
-			"name": "FlashAppletResult",
-			"title": "flash applet result",
-			"description": "flash applat into led",
-			"source": "27FB"
+			"source": "2721",
+			"variables": [
+                {
+                    "name": "Result",
+                    "title": "",
+                    "description": "",
+                    "data": [0],
+                    "state": {
+                        "00": "success",
+                        "01": "fail"
+                    }
+                },
+                {
+                    "name": "Type",
+                    "title": "",
+                    "description": "",
+                    "data": [1],
+                    "state": {
+                        "00": "info",
+                        "01": "control"
+                    }
+                },
+                {
+                	"name": "Mode",
+                	"title": "",
+                	"description": "",
+                	"data": [2],
+                	"state": {
+                		"00": "Local",
+                		"01": "Preview"
+                	}
+                }
+            ]
 		},
 		{
 			"name": "RequestStatusResponse",
